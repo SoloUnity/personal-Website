@@ -1,0 +1,194 @@
+/* Global Styles */
+#name {
+    font-weight: bold;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.icon {
+    cursor: pointer;
+    height: 2rem;
+}
+
+p {
+    color: rgb(85, 85, 85);
+}
+
+/* Navbar */
+#Navbar {
+    background: rgba( 255, 255, 255, 0.8 );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 10px;
+}
+
+.navbar-toggler {
+    border-color: transparent !important;
+}
+
+/* Profile */
+#profile {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 95vh;
+}
+
+#headshot {
+    border-radius: 50%;
+}
+
+.section-container {
+    display: flex;
+}
+
+.section__pic-container {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+.section__text {
+    align-self: center;
+    text-align: center;
+}
+
+.section__text p {
+    font-weight: 600;
+}
+
+.section__text__p1 {
+    text-align: center;
+}
+
+.section__text__p2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+/* Card hovering */
+
+.hoverable {
+    transition: transform .25s, background .25s;
+}
+.hoverable:hover {
+    transform: scale(1.015);
+    position: relative;
+    z-index: 1;
+}
+
+/* Skill Circles */
+.rounded-circle {
+    padding: 2px; 
+    object-fit: contain;
+}
+  
+/* Card Heights */
+.about-col {
+    min-height: 450px;
+}
+
+.proj-col {
+    min-height: 600px; 
+} 
+
+/* About Cards */
+#dance {
+    background-image: url('./assets/dance.JPG'); 
+    background-position: center;
+}
+
+/* Project Cards */
+#vsc {
+    background-image: url('./assets/projects/VSC.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#codevault {
+    background-image: url('./assets/projects/CodeVault.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#aiagent {
+    background-image: url('./assets/projects/AIAgent.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1400px) {
+    /* Profile Section Styles */
+    #profile {
+        height: 83vh;
+        margin-bottom: 6rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    /* Profile Styles */
+    #profile{
+        display: block;
+    }
+    /* Section Styles */
+    section {
+        height: fit-content;
+        padding-top: 20vh;
+    }
+    section {
+        margin: 0 5%;
+    }
+    /* Section Picture Container Styles */
+    .section__pic-container {
+        width: 275px;
+        height: 275px;
+        margin: 0 auto 2rem;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    /* Footer Styles */
+    footer {
+        height: 40vh;
+    }
+    /* Profile Section Styles */
+    #profile {
+        height: 85vh;
+        margin-bottom: 0;
+    }
+
+    /* Button Container Styles */
+    .btn-container {
+        flex-wrap: wrap;
+    }
+
+    /* Logo Styles */
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    /* Section Picture Container Styles */
+    .section__pic-container {
+        width: auto;
+        height: 46vw;
+        justify-content: center;
+    }
+    /* Section Text Styles */
+    .section__text__p2 {
+        font-size: 1.25rem;
+    }
+    /* Title Styles */
+    .title {
+        font-size: 2rem;
+    }
+}
+
