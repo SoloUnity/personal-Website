@@ -33,23 +33,30 @@ p {
     --bs-modal-header-padding: 0rem;
 }
 
-.scrollport {    
-
-      -webkit-mask-image: linear-gradient(to right, #0000, #000, #000, #000, #000, #000, #0000);
+.scrollport {
+    mask-image: linear-gradient(to right, transparent, black 1%, black 99%, transparent);
     overflow-x: auto;
+    overflow-y: hidden;
     overscroll-behavior-x: contain;
-    
     display: flex;
     gap: var(--size-10);
     align-items: start;
     padding: var(--size-10);
-  }
-  
-  .vscImage {
+    white-space: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.scrollport::-webkit-scrollbar {
+    display: none;
+}
+
+.vscImage {
     max-height: 500px;
-    margin-right: 20px; 
     border-radius: 20px;
-  }
+    margin-left: 10px;
+    margin-right: 10px;
+}
 
 /* Navbar */
 #Navbar {
