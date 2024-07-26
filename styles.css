@@ -13,14 +13,26 @@
     height: 2rem;
 }
 
-p {
+.faded {
     color: rgb(85, 85, 85);
 }
 
-/* Modals */
+.neumorphism {
+    background: #ffffff;
+    box-shadow:  20px 20px 60px #a6a6a6,
+                -20px -20px 60px #ffffff;
+    
+}
 
+.btn {
+    background: #ffffff;
+    box-shadow:  20px 20px 60px #bebebe,
+                -20px -20px 60px #ffffff;
+}
+
+/* Modals */
 .modal.fade .modal-content {
-    background-color: rgba( 255, 255, 255, 0.8 );
+    background-color: rgba( 255, 255, 255, 0.85 );
     backdrop-filter: blur( 20px );
     -webkit-backdrop-filter: blur( 20px );
 
@@ -33,8 +45,12 @@ p {
     --bs-modal-header-padding: 0rem;
 }
 
+.modal-body {
+    padding: 0px !important;
+}
+
 .scrollport {
-    mask-image: linear-gradient(to right, transparent, black 1%, black 99%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 2%, black 98%, transparent);
     overflow-x: auto;
     overflow-y: hidden;
     overscroll-behavior-x: contain;
@@ -42,6 +58,8 @@ p {
     gap: var(--size-10);
     align-items: start;
     padding: var(--size-10);
+    margin-left: 0px;
+    margin-right: 0px;
     white-space: nowrap;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -56,6 +74,12 @@ p {
     border-radius: 20px;
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.AgentImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Navbar */
@@ -114,12 +138,13 @@ p {
 /* Card hovering */
 
 .hoverable {
-    transition: transform .25s, background .25s;
+    transition: transform 0.25s;
+    will-change: transform;
 }
+  
 .hoverable:hover {
     transform: scale(1.015);
     position: relative;
-    z-index: 1;
 }
 
 /* Skill Circles */
@@ -145,25 +170,27 @@ p {
 
 /* Project Cards */
 #vsc {
-    background-image: url('./assets/projects/VSC.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-#codevault {
-    background-image: url('./assets/projects/CodeVault.jpg');
+    background-image: url('./assets/projects/ValorantStoreChecker/VSC.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 #aiagent {
-    background-image: url('./assets/projects/AIAgent.jpg');
+    background-image: url('./assets/projects/AIAgent/AIAgent.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+#codevault {
+    background-image: url('./assets/projects/CodeVault/CodeVault.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
 
 /* Media Queries */
 @media screen and (max-width: 1400px) {
