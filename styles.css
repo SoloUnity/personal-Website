@@ -17,27 +17,293 @@
     color: rgb(85, 85, 85);
 }
 
+.glass {
+    background: rgba( 255, 255, 255, 0.85) !important;
+    backdrop-filter: blur( 20px ) !important;
+    -webkit-backdrop-filter: blur( 20px ) !important;
+}
+
 .neumorphism {
     background: #ffffff;
     box-shadow:  20px 20px 60px #a6a6a6,
                 -20px -20px 60px #ffffff;
-    
 }
 
-.btn {
+.neumorphicButton {
     background: #ffffff;
-    box-shadow:  20px 20px 60px #bebebe,
-                -20px -20px 60px #ffffff;
+    box-shadow:  3px 3px 8px #a6a6a6,
+                -3px -3px 8px #ffffff;
 }
 
-/* Modals */
-.modal.fade .modal-content {
-    background-color: rgba( 255, 255, 255, 0.85 );
-    backdrop-filter: blur( 20px );
-    -webkit-backdrop-filter: blur( 20px );
+/* Scrolling Animation */
+.hiddenBlur {
+    opacity: 0;
+    transition: opacity 1s, transform 1s, filter 1s; /* Addresses webkit bug */
+}
 
-    /* --bs-modal-color: #your-text-color;
-    --bs-modal-border-color: #your-border-color; */
+.showBlur {
+    opacity: 1;
+}
+
+.hiddenSlideX {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: opacity 1s, transform 1s, filter 1s;
+}
+
+.showSlideX {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.hiddenSlideY {
+    position: relative;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 1s, transform 1s;
+}
+
+.hiddenSlideY::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    backdrop-filter: blur(5px);
+    transition: opacity 1s;
+}
+
+.showSlideY {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.showSlideY::before {
+    opacity: 0;
+}
+
+@media(prefers-reduced-motion) {
+    .hiddenBlur, .hiddenSlideX, .hiddenSlideY {
+        transition: none;
+    }
+}
+
+
+.staggerAbout:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+
+.staggerSkill:nth-child(2) {
+    transition-delay: 0.2s;
+}
+.staggerSkill:nth-child(3) {
+    transition-delay: 0.4s;
+}
+.staggerSkill:nth-child(4) {
+    transition-delay: 0.6s;
+}
+
+
+.staggerHobby:nth-child(2) {
+    transition-delay: 0.2s;
+}
+.staggerHobby:nth-child(3) {
+    transition-delay: 0.4s;
+}
+
+/* Anchor scrolling */
+#About {
+    scroll-margin-top: 125px;
+}
+
+#Projects {
+    scroll-margin-top: 125px;
+}
+
+#Skills {
+    scroll-margin-top: 125px;
+}
+
+#Hobbies {
+    scroll-margin-top: 125px;
+}
+
+/* Navbar */
+#Navbar {
+    border-radius: 10px;
+}
+
+.navbar-toggler {
+    border-color: transparent !important;
+}
+
+/* Profile */
+
+.btn-light {
+    --bs-btn-hover-border-color: none !important;
+    --bs-btn-border-color: none !important;
+    --bs-btn-bg: #ffffff !important;
+}
+
+.dropdown-menu {
+    --bs-dropdown-border-color: none !important;
+}
+
+#profile {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 95vh;
+}
+
+#picture {
+    border-radius: 50%;
+}
+
+.section-container {
+    display: flex;
+}
+
+.picContainer {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+.text {
+    align-self: center;
+    text-align: center;
+}
+
+.text p {
+    font-weight: 600;
+}
+
+.text1{
+    text-align: center;
+}
+
+.text2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1400px) {
+    /* Profile Section Styles */
+    #profile {
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    /* Profile Styles */
+    #profile{
+        display: block;
+        height: 100vh;
+    }
+    /* Section Styles */
+    section {
+        height: fit-content;
+        padding-top: 20vh;
+    }
+    section {
+        margin: 0 5%;
+    }
+    /* Section Picture Container Styles */
+    .picContainer {
+        width: 275px;
+        height: 275px;
+        margin: 0 auto 2rem;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    /* Button Container Styles */
+    .btn-container {
+        flex-wrap: wrap;
+    }
+
+    /* Section Picture Container Styles */
+    .picContainer {
+        width: auto;
+        height: 46vw;
+        justify-content: center;
+    }
+    /* Section Text Styles */
+    .text2{
+        font-size: 1.25rem;
+    }
+    /* Title Styles */
+    .title {
+        font-size: 2rem;
+    }
+}
+
+/* Card hovering */
+.hoverable {
+    transition: transform 0.25s;
+    will-change: transform;
+}
+  
+.hoverable:hover {
+    transform: scale(1.015);
+    position: relative;
+}
+
+/* Skill Circles */
+.rounded-circle {
+    padding: 2px; 
+    object-fit: contain;
+}
+  
+/* Card Heights */
+.default-col {
+    min-height: 450px;
+}
+
+.proj-col {
+    min-height: 700px; 
+} 
+
+/* Project Cards */
+#vsc {
+    background-image: url('./assets/projects/ValorantStoreChecker/VSC.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: contain;
+
+}
+
+#aiagent {
+    background-image: url('./assets/projects/AIAgent/AIAgent.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: contain;
+
+}
+
+#codevault {
+    background-image: url('./assets/projects/CodeVault/CodeVault.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: contain;
+
+}
+
+/* Hobbies Cards */
+#badminton {
+    background-image: url('./assets/badminton.jpeg');
+}
+#dance {
+    background-image: url('./assets/dance.JPG'); 
+    background-position: center;
 }
 
 .modal.fade .modal-header {
@@ -63,6 +329,8 @@
     white-space: nowrap;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .scrollport::-webkit-scrollbar {
@@ -72,191 +340,11 @@
 .vscImage {
     max-height: 500px;
     border-radius: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 8px;
 }
 
 .AgentImage {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Navbar */
-#Navbar {
-    background: rgba( 255, 255, 255, 0.8 );
-    backdrop-filter: blur( 20px );
-    -webkit-backdrop-filter: blur( 20px );
-    border-radius: 10px;
-}
-
-.navbar-toggler {
-    border-color: transparent !important;
-}
-
-/* Profile */
-#profile {
-    display: flex;
-    justify-content: center;
-    gap: 5rem;
-    height: 95vh;
-}
-
-#headshot {
-    border-radius: 50%;
-}
-
-.section-container {
-    display: flex;
-}
-
-.section__pic-container {
-    display: flex;
-    height: 400px;
-    width: 400px;
-    margin: auto 0;
-}
-
-.section__text {
-    align-self: center;
-    text-align: center;
-}
-
-.section__text p {
-    font-weight: 600;
-}
-
-.section__text__p1 {
-    text-align: center;
-}
-
-.section__text__p2 {
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
-}
-
-/* Card hovering */
-
-.hoverable {
-    transition: transform 0.25s;
-    will-change: transform;
-}
-  
-.hoverable:hover {
-    transform: scale(1.015);
-    position: relative;
-}
-
-/* Skill Circles */
-.rounded-circle {
-    padding: 2px; 
     object-fit: contain;
-}
-  
-/* Card Heights */
-.about-col {
-    min-height: 450px;
-}
-
-.proj-col {
-    min-height: 700px; 
-} 
-
-/* About Cards */
-#dance {
-    background-image: url('./assets/dance.JPG'); 
-    background-position: center;
-}
-
-/* Project Cards */
-#vsc {
-    background-image: url('./assets/projects/ValorantStoreChecker/VSC.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-#aiagent {
-    background-image: url('./assets/projects/AIAgent/AIAgent.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-#codevault {
-    background-image: url('./assets/projects/CodeVault/CodeVault.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-
-
-/* Media Queries */
-@media screen and (max-width: 1400px) {
-    /* Profile Section Styles */
-    #profile {
-        height: 83vh;
-        margin-bottom: 6rem;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    /* Profile Styles */
-    #profile{
-        display: block;
-    }
-    /* Section Styles */
-    section {
-        height: fit-content;
-        padding-top: 20vh;
-    }
-    section {
-        margin: 0 5%;
-    }
-    /* Section Picture Container Styles */
-    .section__pic-container {
-        width: 275px;
-        height: 275px;
-        margin: 0 auto 2rem;
-    }
-
-}
-
-@media screen and (max-width: 600px) {
-    /* Footer Styles */
-    footer {
-        height: 40vh;
-    }
-    /* Profile Section Styles */
-    #profile {
-        height: 85vh;
-        margin-bottom: 0;
-    }
-
-    /* Button Container Styles */
-    .btn-container {
-        flex-wrap: wrap;
-    }
-
-    /* Logo Styles */
-    .logo {
-        font-size: 1.5rem;
-    }
-
-    /* Section Picture Container Styles */
-    .section__pic-container {
-        width: auto;
-        height: 46vw;
-        justify-content: center;
-    }
-    /* Section Text Styles */
-    .section__text__p2 {
-        font-size: 1.25rem;
-    }
-    /* Title Styles */
-    .title {
-        font-size: 2rem;
-    }
 }
 
