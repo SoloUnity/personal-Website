@@ -318,6 +318,7 @@
 @media (max-width: 991px) and (max-height: 575px) and (orientation: landscape) {
     #profile {
         min-height: 150vh;
+    }
 }
 
 /* up to sm included */
