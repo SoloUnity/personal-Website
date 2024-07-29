@@ -13,6 +13,7 @@
     <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="/path/to/modal-video.js"></script> -->
     <script defer src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/yesvarg/emoji@main/emoji.js"></script>
 </head>
 
 <body>
@@ -139,7 +140,7 @@
                 <div class="neumorphism h-100 overflow-hidden rounded-4">
                     <div class="h-100 d-flex flex-column p-5">
                         <h3 class="mb-4 display-6 lh-1 fw-bold">Hi!</h3>
-                        <div>
+                        <div id="content">
                             I'm Gordon, from Canada 🇨🇦! I am a 3rd year
                             <strong>Software Engineering student</strong>
                             at McGill University. I am also self-taught in iOS and web
@@ -158,7 +159,7 @@
                             as an iOS developer. I love to learn and love to meet others. With that said, I am always open to new opportunities 
                             so feel free to reach out and
                             <div class="btn-group dropend">
-                                <a class="text-decoration-none richLink fw-bold" style="margin-top: -3px;" data-bs-toggle="dropdown" aria-expanded="false">connect</a>
+                                <a class="text-decoration-none richLink fw-bold" style="margin-top: -3px; cursor: pointer;" data-bs-toggle="dropdown" aria-expanded="false">connect</a>
                                 <ul class="dropdown-menu gap-1 p-2 rounded-3 mx-0 shadow w-220px">
                                     <li>
                                         <a class="dropdown-item rounded-2" href="https://www.linkedin.com/in/gordonng03/"
@@ -198,7 +199,7 @@
 
             <div class="col-md-5 col-lg-5 default-col staggerAbout hiddenSlideX">
                 <div class="neumorphism h-100 overflow-hidden rounded-4">
-                    <div class="h-100 d-flex flex-column p-5">
+                    <div class="h-100 d-flex flex-column p-5" id="content">
                         <h3 class="mb-4 display-6 lh-1 fw-bold">Also</h3>
 
                         <h5>Education</h5>
@@ -827,7 +828,7 @@
         <div class="modal-dialog modal-xl modal-fullscreen-md-down">
             <div class="modal-content rounded-4 px-5 py-5 glass">
                 <div class="modal-header d-flex justify-content-between align-items-start">
-                    <h3 class="mb-4 display-6 lh-1 fw-bold">Dance</h3>
+                    <h3 class="mb-4 display-6 lh-1 fw-bold">Seventeen - Rock With You (Live Cover by Hallyu XIV | Crowd Angle)</h3>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
                         onclick="document.getElementById('danceVideo').pause();"></button>
                 </div>
@@ -847,7 +848,7 @@
                                         d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z">
                                     </path>
                                 </svg>
-                                <span style="margin-left: 5px"> HD</span>
+                                <span style="margin-left: 5px"> HD Production Angle</span>
                             </div>
                         </a>
                     </div>
@@ -861,6 +862,10 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
+    <!-- Change to Apple Emojis -->
+    <script>
+        replaceEmojisWithImages("#content", 1.6, 0.5);
+    </script>
 </body>
 
 </html>
