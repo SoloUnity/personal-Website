@@ -52,5 +52,3 @@ const hiddenElementsSlideX = document.querySelectorAll(".hiddenSlideX");
 hiddenElementsSlideX.forEach((element) => {
     observerSlideX.observe(element);
 });
-
-
