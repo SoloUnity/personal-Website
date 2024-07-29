@@ -20,7 +20,6 @@ const observerSlideY = new IntersectionObserver((entries) => {
         }
     });
 });
-const hiddenElementsSlideY = document.querySelectorAll(".hiddenSlideY");
 
 // Blur
 const observerBlur = new IntersectionObserver((entries) => {
@@ -41,6 +40,7 @@ const observerSlideX = new IntersectionObserver((entries) => {
 });
 
 // Observe
+const hiddenElementsSlideY = document.querySelectorAll(".hiddenSlideY");
 hiddenElementsSlideY.forEach((element) => {
     observerSlideY.observe(element);
 });
