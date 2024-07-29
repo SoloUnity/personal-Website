@@ -79,19 +79,26 @@
     --bs-nav-link-hover-color: #4392b5 !important;
     --bs-nav-link-active-color: #3f89aa !important;
     --bs-nav-link-disabled-color: #54b3d6 !important;
-  }
+}
   
-  .nav-link:hover {
+.nav-link:hover {
     color: var(--bs-nav-link-hover-color);
-  }
+}
   
-  .nav-link:active, .nav-link.active {
+.nav-link:active, .nav-link.active {
     color: var(--bs-nav-link-active-color);
-  }
+}
   
-  .nav-link:disabled, .nav-link.disabled {
+.nav-link:disabled, .nav-link.disabled {
     color: var(--bs-nav-link-disabled-color);
-  }
+}
+
+.emoji {
+    width: 1.2em;
+    margin-left: 0.1em; 
+    margin-right: 0.1em; 
+    margin-bottom: 0.3em;
+}
 
 /* Scrolling animation */
 .hiddenBlur {

@@ -13,7 +13,6 @@
     <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="/path/to/modal-video.js"></script> -->
     <script defer src="app.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/yesvarg/emoji@main/emoji.js"></script>
 </head>
 
 <body>
@@ -140,8 +139,8 @@
                 <div class="neumorphism h-100 overflow-hidden rounded-4">
                     <div class="h-100 d-flex flex-column p-5">
                         <h3 class="mb-4 display-6 lh-1 fw-bold">Hi!</h3>
-                        <div id="content">
-                            I'm Gordon, from Canada 🇨🇦! I am a 3rd year
+                        <div>
+                            I'm Gordon, from Canada <img src="./assets/flags/canada.png" class="emoji" >! I am a 3rd year
                             <strong>Software Engineering student</strong>
                             at McGill University. I am also self-taught in iOS and web
                             development, and am currently exploring other areas such as AI
@@ -199,7 +198,7 @@
 
             <div class="col-md-5 col-lg-5 default-col staggerAbout hiddenSlideX">
                 <div class="neumorphism h-100 overflow-hidden rounded-4">
-                    <div class="h-100 d-flex flex-column p-5" id="content">
+                    <div class="h-100 d-flex flex-column p-5">
                         <h3 class="mb-4 display-6 lh-1 fw-bold">Also</h3>
 
                         <h5>Education</h5>
@@ -213,9 +212,9 @@
 
                         <h5>Languages</h5>
                         <ul>
-                            <li>🇬🇧 English</li>
-                            <li>🇫🇷 French</li>
-                            <li>🇨🇳 Mandarin & Cantonese</li>
+                            <li><img src="./assets/flags/uk.png" class="emoji" > English</li>
+                            <li><img src="./assets/flags/france.png" class="emoji" > French</li>
+                            <li><img src="./assets/flags/china.png" class="emoji" > Mandarin & Cantonese</li>
                         </ul>
                     </div>
                 </div>
@@ -861,11 +860,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-
-    <!-- Change to Apple Emojis -->
-    <script>
-        replaceEmojisWithImages("#content", 1.6, 0.5);
-    </script>
 </body>
 
 </html>
