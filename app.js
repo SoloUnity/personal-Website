@@ -52,3 +52,24 @@ const hiddenElementsSlideX = document.querySelectorAll(".hiddenSlideX");
 hiddenElementsSlideX.forEach((element) => {
     observerSlideX.observe(element);
 });
+
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+        pauseAllVideos();
+    }
+});
+
+function pauseAllVideos() {
+    var videos = document.querySelectorAll("video");
+    videos.forEach(function(video) {
+        if (!video.paused) {
+            video.pause();
+        }
+    });
+}
+
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+        pauseVideo();
+    }
+});
