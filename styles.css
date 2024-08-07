@@ -1,4 +1,8 @@
 /* Global Styles */
+html {
+    scroll-behavior: smooth;
+}
+
 #name {
     font-weight: bold;
 }
