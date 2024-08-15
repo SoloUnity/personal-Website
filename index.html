@@ -9,14 +9,13 @@
     <link rel="stylesheet" href="./styles.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-    <!-- <link rel="stylesheet" type="text/css" href="/path/to/modal-video.min.css">
-    <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="/path/to/modal-video.js"></script> -->
     <script defer src="app.js"></script>
 </head>
 
 <body>
-    <!-- Navbar -->
+    <!-- 
+    MARK: Navbar 
+    -->
     <div id="Navbar" class="container fixed-top rounded-4 shadow-lg glass hiddenSlideY">
         <nav class="navbar navbar-expand-md py-3">
             <div class="container-fluid px-0">
@@ -130,9 +129,11 @@
         </section>
     </div>
 
-    <!-- About Me -->
+    <!-- 
+    MARK: About Me 
+    -->
     <div class="container px-4 py-5 custom-cards">
-        <h2 id="About" class="pb-2">About Me</h2>
+        <h2 id="About" class="pb-2 hiddenBlur">About Me</h2>
         <div class="row row-cols-1 row-cols-lg-1 align-items-stretch g-4 mt-5">
             <div class="col-md-7 col-lg-7 default-col staggerAbout hiddenSlideX">
                 <div class="neumorphism h-100 overflow-hidden rounded-4">
@@ -151,9 +152,9 @@
                             In the past, I have worked on popular projects such as
                             <a href="#Projects" class="text-decoration-none richLink fw-bold" style="white-space: nowrap;">Valorant Store Checker</a>
                             as well as having interned at
-                            <a href="https://www.touchtunes.com" class="text-decoration-none richLink fw-bold" target="_blank style="white-space: nowrap;">TouchTunes</a>
+                            <a href="https://www.touchtunes.com" class="text-decoration-none richLink fw-bold" target="_blank" style="white-space: nowrap;">TouchTunes</a>
                             and
-                            <a href="https://www.bettersleep.com" class="text-decoration-none richLink fw-bold" target="_blank  style="white-space: nowrap;">BetterSleep</a>
+                            <a href="https://www.bettersleep.com" class="text-decoration-none richLink fw-bold" target="_blank"  style="white-space: nowrap;">BetterSleep</a>
                             as an iOS developer. I love to learn and love to meet others. With that said, I am always open to new opportunities 
                             so feel free to reach out and
                             <div class="btn-group dropend">
@@ -221,12 +222,18 @@
         </div>
     </div>
 
-    <!-- Projects -->
+    <!-- 
+    MARK: Projects 
+    -->
     <div class="container px-4 py-5 custom-cards">
-        <h2 id="Projects" class="pb-2">Projects</h2>
+        <h2 id="Projects" class="pb-2 hiddenBlur">Projects</h2>
+        
         <div class="row row-cols-1 align-items-stretch g-4 py-5 hiddenSlideX">
             <div class="col proj-col" data-bs-toggle="modal" data-bs-target="#vscModal">
                 <div class="neumorphism h-100 overflow-hidden rounded-4 hoverable" id="vsc">
+                    <img src="./assets/projects/ValorantStoreChecker/VSC.jpg" alt="Valorant Store Checker" loading="lazy"
+                        style="object-fit: cover; width: 100%; height: 100%; position: absolute; z-index: -1;" />
+
                     <div class="d-flex flex-column h-100 p-5 text-white text-shadow-1">
                         <div class="d-flex mt-auto justify-content-between align-items-center">
                             <h3 class="display-6 lh-1 fw-bold mb-0">
@@ -234,11 +241,11 @@
                             </h3>
                             <ul class="d-flex list-unstyled mb-0 flex">
                                 <li class="me-2">
-                                    <img src="./assets/logos/swift.png" alt="Swift" width="32" height="32"
+                                    <img src="./assets/logos/swift.png" alt="Swift" width="32" height="32" loading="lazy"
                                         class="rounded-circle border border-white" />
                                 </li>
                                 <li>
-                                    <img src="./assets/logos/swiftui.png" alt="SwiftUI" width="32" height="32"
+                                    <img src="./assets/logos/swiftui.png" alt="SwiftUI" width="32" height="32" loading="lazy"
                                         class="rounded-circle border border-white" />
                                 </li>
                             </ul>
@@ -252,12 +259,14 @@
         <div class="row row-cols-1 align-items-stretch g-4 mb-5 hiddenSlideX">
             <div class="col proj-col" data-bs-toggle="modal" data-bs-target="#aiagentModal">
                 <div class="neumorphism h-100 overflow-hidden rounded-4 hoverable" id="aiagent">
+                    <img src="./assets/projects/AIAgent/AIAgent.jpg" alt="AI Game Agent" loading="lazy"
+                        style="object-fit: cover; width: 100%; height: 100%; position: absolute; z-index: -1;" />
                     <div class="d-flex flex-column h-100 p-5 text-white text-shadow-1">
                         <div class="d-flex mt-auto justify-content-between align-items-center">
                             <h3 class="display-6 lh-1 fw-bold mb-0">AI Game Agent</h3>
                             <ul class="d-flex list-unstyled mb-0">
                                 <li class="me-auto">
-                                    <img src="./assets/logos/python.png" alt="Bootstrap" width="32" height="32"
+                                    <img src="./assets/logos/python.png" alt="Bootstrap" width="32" height="32" loading="lazy"
                                         class="rounded-circle border border-white" />
                                 </li>
                             </ul>
@@ -268,23 +277,25 @@
             </div>
         </div>
 
-        <div class="row row-cols-1 align-items-stretch g-4 mb-5 hiddenSlideX">
+        <div class="row row-cols-1 align-items-stretch g-4 mb-5 hiddenSlideX position-relative" style="z-index: 2;">
             <div class="col proj-col" data-bs-toggle="modal" data-bs-target="#codevaultModal" data-src="">
                 <div class="neumorphism h-100 overflow-hidden rounded-4 hoverable" id="codevault">
+                    <img src="./assets/projects/CodeVault/CodeVault.jpg" alt="CodeVault" loading="lazy"
+                    style="object-fit: cover; width: 100%; height: 100%; position: absolute; z-index: -1;" />
                     <div class="d-flex flex-column h-100 p-5 text-white text-shadow-1">
                         <div class="d-flex mt-auto justify-content-between align-items-center">
                             <h3 class="display-6 lh-1 fw-bold mb-0">CodeVault</h3>
                             <ul class="d-flex list-unstyled mb-0">
                                 <li class="me-2">
-                                    <img src="./assets/logos/swift.png" alt="Swift" width="32" height="32"
+                                    <img src="./assets/logos/swift.png" alt="Swift" width="32" height="32" loading="lazy"
                                         class="rounded-circle border border-white" />
                                 </li>
                                 <li class="me-2">
-                                    <img src="./assets/logos/swiftui.png" alt="SwiftUI" width="32" height="32"
+                                    <img src="./assets/logos/swiftui.png" alt="SwiftUI" width="32" height="32" loading="lazy"
                                         class="rounded-circle border border-white" />
                                 </li>
                                 <li>
-                                    <img src="./assets/logos/reactjs.png" alt="React" width="32" height="32"
+                                    <img src="./assets/logos/reactjs.png" alt="React" width="32" height="32" loading="lazy"
                                         class="rounded-circle border border-white" />
                                 </li>
                             </ul>
@@ -294,20 +305,272 @@
                 </div>
             </div>
         </div>
+
+        <div class="container-fluid position-relative" style="z-index: 1;">
+            <div class="row flex-nowrap scrollport" id="projectsScrollport">
+                
+                <div class="col-11 col-sm-9 col-md-7 col-lg-5 hoverable" style="padding-left: 0px;">
+                    <div class="neumorphism h-100 overflow-hidden rounded-4">
+                        <div class="d-flex flex-column h-100 p-5">
+                            <h3 class="mb-4 display-6 lh-1 fw-bold">Frontend</h3>
+                            <div class="row row-cols-1 row-cols-sm-2 g-4">
+                                <div class="col d-flex align-items-start">
+                                    <img src="./assets/logos/swiftui.png" alt="SwiftUI logo" loading="lazy"
+                                        class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
+                                    <div>
+                                        <h3 class="mb-0 fs-4 text-body-emphasis">SwiftUI</h3>
+                                        <p class="faded">Advanced</p>
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-start">
+                                    <img src="./assets/logos/uikit.png" alt="UIKit logo" loading="lazy"
+                                        class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
+                                    <div>
+                                        <h3 class="mb-0 fs-4 text-body-emphasis">UIKit</h3>
+                                        <p class="faded">Intermediate</p>
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-start">
+                                    <img src="./assets/logos/html.png" alt="HTML logo" loading="lazy"
+                                        class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
+                                    <div>
+                                        <h3 class="mb-0 fs-4 text-body-emphasis">HTML</h3>
+                                        <p class="faded">Intermediate</p>
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-start">
+                                    <img src="./assets/logos/css.png" alt="CSS logo" loading="lazy"
+                                        class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
+                                    <div>
+                                        <h3 class="mb-0 fs-4 text-body-emphasis">CSS</h3>
+                                        <p class="faded">Intermediate</p>
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-start">
+                                    <img src="./assets/logos/reactjs.png" alt="UIKit logo" loading="lazy"
+                                        class="bi text-body-secondary flex-shrink-0 me-3" width="28em" />
+                                    <div>
+                                        <h3 class="mb-0 fs-4 text-body-emphasis">React.js</h3>
+                                        <p class="faded">Basic</p>
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-start">
+                                    <img src="./assets/logos/javascript.png" alt="Javascript logo" loading="lazy"
+                                        class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
+                                    <div>
+                                        <h3 class="mb-0 fs-4 text-body-emphasis">JavaScript</h3>
+                                        <p class="faded">Basic</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-11 col-sm-9 col-md-7 col-lg-5 hoverable">
+                    <div class="neumorphism h-100 overflow-hidden rounded-4">
+                        <div class="d-flex flex-column h-100 p-5">
+                            <h3 class="mb-4 display-6 lh-1 fw-bold">Frontend</h3>
+                            <div class="row row-cols-1 row-cols-sm-2 g-4">
+                                <div class="col d-flex align-items-start">
+                                    <img src="./assets/logos/swiftui.png" alt="SwiftUI logo" loading="lazy"
+                                        class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
+                                    <div>
+                                        <h3 class="mb-0 fs-4 text-body-emphasis">SwiftUI</h3>
+                                        <p class="faded">Advanced</p>
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-start">
+                                    <img src="./assets/logos/uikit.png" alt="UIKit logo" loading="lazy"
+                                        class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
+                                    <div>
+                                        <h3 class="mb-0 fs-4 text-body-emphasis">UIKit</h3>
+                                        <p class="faded">Intermediate</p>
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-start">
+                                    <img src="./assets/logos/html.png" alt="HTML logo" loading="lazy"
+                                        class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
+                                    <div>
+                                        <h3 class="mb-0 fs-4 text-body-emphasis">HTML</h3>
+                                        <p class="faded">Intermediate</p>
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-start">
+                                    <img src="./assets/logos/css.png" alt="CSS logo" loading="lazy"
+                                        class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
+                                    <div>
+                                        <h3 class="mb-0 fs-4 text-body-emphasis">CSS</h3>
+                                        <p class="faded">Intermediate</p>
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-start">
+                                    <img src="./assets/logos/reactjs.png" alt="UIKit logo" loading="lazy"
+                                        class="bi text-body-secondary flex-shrink-0 me-3" width="28em" />
+                                    <div>
+                                        <h3 class="mb-0 fs-4 text-body-emphasis">React.js</h3>
+                                        <p class="faded">Basic</p>
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-start">
+                                    <img src="./assets/logos/javascript.png" alt="Javascript logo" loading="lazy"
+                                        class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
+                                    <div>
+                                        <h3 class="mb-0 fs-4 text-body-emphasis">JavaScript</h3>
+                                        <p class="faded">Basic</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-11 col-sm-9 col-md-7 col-lg-5 hoverable">
+                    <div class="neumorphism h-100 overflow-hidden rounded-4">
+                        <div class="d-flex flex-column h-100 p-5">
+                            <h3 class="mb-4 display-6 lh-1 fw-bold">Frontend</h3>
+                            <div class="row row-cols-1 row-cols-sm-2 g-4">
+                                <div class="col d-flex align-items-start">
+                                    <img src="./assets/logos/swiftui.png" alt="SwiftUI logo" loading="lazy"
+                                        class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
+                                    <div>
+                                        <h3 class="mb-0 fs-4 text-body-emphasis">SwiftUI</h3>
+                                        <p class="faded">Advanced</p>
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-start">
+                                    <img src="./assets/logos/uikit.png" alt="UIKit logo" loading="lazy"
+                                        class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
+                                    <div>
+                                        <h3 class="mb-0 fs-4 text-body-emphasis">UIKit</h3>
+                                        <p class="faded">Intermediate</p>
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-start">
+                                    <img src="./assets/logos/html.png" alt="HTML logo" loading="lazy"
+                                        class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
+                                    <div>
+                                        <h3 class="mb-0 fs-4 text-body-emphasis">HTML</h3>
+                                        <p class="faded">Intermediate</p>
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-start">
+                                    <img src="./assets/logos/css.png" alt="CSS logo" loading="lazy"
+                                        class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
+                                    <div>
+                                        <h3 class="mb-0 fs-4 text-body-emphasis">CSS</h3>
+                                        <p class="faded">Intermediate</p>
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-start">
+                                    <img src="./assets/logos/reactjs.png" alt="UIKit logo" loading="lazy"
+                                        class="bi text-body-secondary flex-shrink-0 me-3" width="28em" />
+                                    <div>
+                                        <h3 class="mb-0 fs-4 text-body-emphasis">React.js</h3>
+                                        <p class="faded">Basic</p>
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-start">
+                                    <img src="./assets/logos/javascript.png" alt="Javascript logo" loading="lazy"
+                                        class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
+                                    <div>
+                                        <h3 class="mb-0 fs-4 text-body-emphasis">JavaScript</h3>
+                                        <p class="faded">Basic</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-11 col-sm-9 col-md-7 col-lg-5 hoverable" style="padding-right: 0px;">
+                    <div class="neumorphism h-100 overflow-hidden rounded-4">
+                        <div class="d-flex flex-column h-100 p-5">
+                            <h3 class="mb-4 display-6 lh-1 fw-bold">Frontend</h3>
+                            <div class="row row-cols-1 row-cols-sm-2 g-4">
+                                <div class="col d-flex align-items-start">
+                                    <img src="./assets/logos/swiftui.png" alt="SwiftUI logo" loading="lazy"
+                                        class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
+                                    <div>
+                                        <h3 class="mb-0 fs-4 text-body-emphasis">SwiftUI</h3>
+                                        <p class="faded">Advanced</p>
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-start">
+                                    <img src="./assets/logos/uikit.png" alt="UIKit logo" loading="lazy"
+                                        class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
+                                    <div>
+                                        <h3 class="mb-0 fs-4 text-body-emphasis">UIKit</h3>
+                                        <p class="faded">Intermediate</p>
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-start">
+                                    <img src="./assets/logos/html.png" alt="HTML logo" loading="lazy"
+                                        class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
+                                    <div>
+                                        <h3 class="mb-0 fs-4 text-body-emphasis">HTML</h3>
+                                        <p class="faded">Intermediate</p>
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-start">
+                                    <img src="./assets/logos/css.png" alt="CSS logo" loading="lazy"
+                                        class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
+                                    <div>
+                                        <h3 class="mb-0 fs-4 text-body-emphasis">CSS</h3>
+                                        <p class="faded">Intermediate</p>
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-start">
+                                    <img src="./assets/logos/reactjs.png" alt="UIKit logo" loading="lazy"
+                                        class="bi text-body-secondary flex-shrink-0 me-3" width="28em" />
+                                    <div>
+                                        <h3 class="mb-0 fs-4 text-body-emphasis">React.js</h3>
+                                        <p class="faded">Basic</p>
+                                    </div>
+                                </div>
+                                <div class="col d-flex align-items-start">
+                                    <img src="./assets/logos/javascript.png" alt="Javascript logo" loading="lazy"
+                                        class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
+                                    <div>
+                                        <h3 class="mb-0 fs-4 text-body-emphasis">JavaScript</h3>
+                                        <p class="faded">Basic</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="d-flex justify-content-end mt-5 position-relative" style="z-index: 2;">
+            <button type="button" class="btn btn-light rounded-circle neumorphicButton me-2 p-2 lh-1 left1" style="width: 35px; height: 35px;">
+               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left faded" viewBox="0 0 16 16">
+                 <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" stroke="currentColor" stroke-width="1.5"/>
+               </svg>
+             </button>
+             <button type="button" class="btn btn-light rounded-circle neumorphicButton p-2 lh-1 right1" style="width: 35px; height: 35px;">
+               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right faded" viewBox="0 0 16 16">
+                 <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" stroke="currentColor" stroke-width="1.5"/>
+               </svg>
+             </button>
+        </div>
     </div>
 
-    <!-- Skills -->
+    <!-- 
+    MARK: Skills 
+    -->
     <div class="container px-4 py-5" id="icon-grid">
-        <h2 id="Skills" class="pb-2">Skills</h2>
+        <h2 id="Skills" class="pb-2 hiddenBlur">Skills</h2>
 
-        <div class="row row-cols-1 row-cols-lg-2 align-items-stretch g-4 py-5">
+        <div class="row row-cols-1 row-cols-lg-2 align-items-stretch g-4 pt-5">
             <div class="col staggerSkill hiddenSlideX">
                 <div class="neumorphism h-100 overflow-hidden rounded-4">
                     <div class="d-flex flex-column h-100 p-5">
                         <h3 class="mb-4 display-6 lh-1 fw-bold">Frontend</h3>
                         <div class="row row-cols-1 row-cols-sm-2 g-4">
                             <div class="col d-flex align-items-start">
-                                <img src="./assets/logos/swiftui.png" alt="SwiftUI logo"
+                                <img src="./assets/logos/swiftui.png" alt="SwiftUI logo" loading="lazy"
                                     class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
                                 <div>
                                     <h3 class="mb-0 fs-4 text-body-emphasis">SwiftUI</h3>
@@ -315,7 +578,7 @@
                                 </div>
                             </div>
                             <div class="col d-flex align-items-start">
-                                <img src="./assets/logos/uikit.png" alt="UIKit logo"
+                                <img src="./assets/logos/uikit.png" alt="UIKit logo" loading="lazy"
                                     class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
                                 <div>
                                     <h3 class="mb-0 fs-4 text-body-emphasis">UIKit</h3>
@@ -323,7 +586,7 @@
                                 </div>
                             </div>
                             <div class="col d-flex align-items-start">
-                                <img src="./assets/logos/html.png" alt="HTML logo"
+                                <img src="./assets/logos/html.png" alt="HTML logo" loading="lazy"
                                     class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
                                 <div>
                                     <h3 class="mb-0 fs-4 text-body-emphasis">HTML</h3>
@@ -331,7 +594,7 @@
                                 </div>
                             </div>
                             <div class="col d-flex align-items-start">
-                                <img src="./assets/logos/css.png" alt="CSS logo"
+                                <img src="./assets/logos/css.png" alt="CSS logo" loading="lazy"
                                     class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
                                 <div>
                                     <h3 class="mb-0 fs-4 text-body-emphasis">CSS</h3>
@@ -339,7 +602,7 @@
                                 </div>
                             </div>
                             <div class="col d-flex align-items-start">
-                                <img src="./assets/logos/reactjs.png" alt="UIKit logo"
+                                <img src="./assets/logos/reactjs.png" alt="UIKit logo" loading="lazy"
                                     class="bi text-body-secondary flex-shrink-0 me-3" width="28em" />
                                 <div>
                                     <h3 class="mb-0 fs-4 text-body-emphasis">React.js</h3>
@@ -347,7 +610,7 @@
                                 </div>
                             </div>
                             <div class="col d-flex align-items-start">
-                                <img src="./assets/logos/javascript.png" alt="Javascript logo"
+                                <img src="./assets/logos/javascript.png" alt="Javascript logo" loading="lazy"
                                     class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
                                 <div>
                                     <h3 class="mb-0 fs-4 text-body-emphasis">JavaScript</h3>
@@ -365,7 +628,7 @@
                         <h3 class="mb-4 display-6 lh-1 fw-bold">Backend</h3>
                         <div class="row row-cols-1 row-cols-sm-2 g-4">
                             <div class="col d-flex align-items-start">
-                                <img src="./assets/logos/swiftdata.png" alt="SwiftData logo"
+                                <img src="./assets/logos/swiftdata.png" alt="SwiftData logo" loading="lazy"
                                     class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
                                 <div>
                                     <h2 class="mb-0 fs-4 text-body-emphasis">SwiftData</h2>
@@ -373,7 +636,7 @@
                                 </div>
                             </div>
                             <div class="col d-flex align-items-start">
-                                <img src="./assets/logos/sql.png" alt="Swift Logo"
+                                <img src="./assets/logos/sql.png" alt="Swift Logo" loading="lazy"
                                     class="bi text-body-secondary flex-shrink-0 me-3" width="28em" />
                                 <div>
                                     <h3 class="mb-0 fs-4 text-body-emphasis">PSQL</h3>
@@ -381,7 +644,7 @@
                                 </div>
                             </div>
                             <div class="col d-flex align-items-start">
-                                <img src="./assets/logos/nodejs.png" alt="Node.js logo"
+                                <img src="./assets/logos/nodejs.png" alt="Node.js logo" loading="lazy"
                                     class="bi text-body-secondary flex-shrink-0 me-3" width="28em" />
                                 <div>
                                     <h3 class="mb-0 fs-4 text-body-emphasis">Node.js</h3>
@@ -389,7 +652,7 @@
                                 </div>
                             </div>
                             <div class="col d-flex align-items-start">
-                                <img src="./assets/logos/expressjs.png" alt="Express.js logo"
+                                <img src="./assets/logos/expressjs.png" alt="Express.js logo" loading="lazy"
                                     class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
                                 <div>
                                     <h3 class="mb-0 fs-4 text-body-emphasis">Express.js</h3>
@@ -407,7 +670,7 @@
                         <h3 class="mb-4 display-6 lh-1 fw-bold">General</h3>
                         <div class="row row-cols-1 row-cols-sm-2 g-4">
                             <div class="col d-flex align-items-start">
-                                <img src="./assets/logos/swift.png" alt="Swift logo"
+                                <img src="./assets/logos/swift.png" alt="Swift logo" loading="lazy"
                                     class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
                                 <div>
                                     <h2 class="mb-0 fs-4 text-body-emphasis">Swift</h2>
@@ -415,7 +678,7 @@
                                 </div>
                             </div>
                             <div class="col d-flex align-items-start">
-                                <img src="./assets/logos/objc.png" alt="Objective-C logo"
+                                <img src="./assets/logos/objc.png" alt="Objective-C logo" loading="lazy"
                                     class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
                                 <div>
                                     <h3 class="mb-0 fs-4 text-body-emphasis">Obj-C</h3>
@@ -423,7 +686,7 @@
                                 </div>
                             </div>
                             <div class="col d-flex align-items-start">
-                                <img src="./assets/logos/python.png" alt="Python logo"
+                                <img src="./assets/logos/python.png" alt="Python logo" loading="lazy"
                                     class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
                                 <div>
                                     <h3 class="mb-0 fs-4 text-body-emphasis">Python</h3>
@@ -431,7 +694,7 @@
                                 </div>
                             </div>
                             <div class="col d-flex align-items-start">
-                                <img src="./assets/logos/java.png" alt="Java logo"
+                                <img src="./assets/logos/java.png" alt="Java logo" loading="lazy"
                                     class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
                                 <div>
                                     <h3 class="mb-0 fs-4 text-body-emphasis">Java</h3>
@@ -439,7 +702,7 @@
                                 </div>
                             </div>
                             <div class="col d-flex align-items-start">
-                                <img src="./assets/logos/c.png" alt="C Logo"
+                                <img src="./assets/logos/c.png" alt="C Logo" loading="lazy"
                                     class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
                                 <div>
                                     <h3 class="mb-0 fs-4 text-body-emphasis">C</h3>
@@ -447,7 +710,7 @@
                                 </div>
                             </div>
                             <div class="col d-flex align-items-start">
-                                <img src="./assets/logos/ocaml.png" alt="OCaml Logo"
+                                <img src="./assets/logos/ocaml.png" alt="OCaml Logo" loading="lazy"
                                     class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
                                 <div>
                                     <h3 class="mb-0 fs-4 text-body-emphasis">OCaml</h3>
@@ -465,7 +728,7 @@
                         <h3 class="mb-4 display-6 lh-1 fw-bold">Other</h3>
                         <div class="row row-cols-1 row-cols-sm-2 g-4">
                             <div class="col d-flex align-items-start">
-                                <img src="./assets/logos/git.png" alt="Git logo"
+                                <img src="./assets/logos/git.png" alt="Git logo" loading="lazy"
                                     class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
                                 <div>
                                     <h2 class="mb-0 fs-4 text-body-emphasis">Git</h2>
@@ -473,7 +736,7 @@
                                 </div>
                             </div>
                             <div class="col d-flex align-items-start">
-                                <img src="./assets/logos/github.png" alt="GitHub logo"
+                                <img src="./assets/logos/github.png" alt="GitHub logo" loading="lazy"
                                     class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
                                 <div>
                                     <h3 class="mb-0 fs-4 text-body-emphasis">GitHub</h3>
@@ -481,7 +744,7 @@
                                 </div>
                             </div>
                             <div class="col d-flex align-items-start">
-                                <img src="./assets/logos/xctest.png" alt="XCTest logo"
+                                <img src="./assets/logos/xctest.png" alt="XCTest logo" loading="lazy"
                                     class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
                                 <div>
                                     <h2 class="mb-0 fs-4 text-body-emphasis">XCTest</h2>
@@ -489,7 +752,7 @@
                                 </div>
                             </div>
                             <div class="col d-flex align-items-start">
-                                <img src="./assets/logos/junit.png" alt="JUnit logo"
+                                <img src="./assets/logos/junit.png" alt="JUnit logo" loading="lazy"
                                     class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
                                 <div>
                                     <h3 class="mb-0 fs-4 text-body-emphasis">JUnit</h3>
@@ -497,7 +760,7 @@
                                 </div>
                             </div>
                             <div class="col d-flex align-items-start">
-                                <img src="./assets/logos/jira.png" alt="Jira Logo"
+                                <img src="./assets/logos/jira.png" alt="Jira Logo" loading="lazy"
                                     class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
                                 <div>
                                     <h3 class="mb-0 fs-4 text-body-emphasis">Jira</h3>
@@ -505,7 +768,7 @@
                                 </div>
                             </div>
                             <div class="col d-flex align-items-start">
-                                <img src="./assets/logos/confluence.png" alt="Swift Logo"
+                                <img src="./assets/logos/confluence.png" alt="Swift Logo" loading="lazy"
                                     class="bi text-body-secondary flex-shrink-0 me-3" width="28em" height="28em" />
                                 <div>
                                     <h3 class="mb-0 fs-4 text-body-emphasis">Confluence</h3>
@@ -519,13 +782,17 @@
         </div>
     </div>
 
-    <!-- Hobbies -->
+    <!-- 
+    MARK: Interests 
+    -->
     <div class="container px-4 py-5 custom-cards">
-        <h2 id="Interests" class="pb-2">Interests</h2>
+        <h2 id="Interests hiddenBlur" class="pb-2">Interests</h2>
 
         <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-4">
             <div class="col default-col staggerHobby hiddenSlideX" style="z-index: 1">
-                <div class="neumorphism h-100 overflow-hidden rounded-4" id="badminton">
+                <div class="neumorphism h-100 overflow-hidden rounded-4" id="badminton" style="will-change: transform;">
+                    <img src="./assets/hobbies/badminton.jpeg" alt="CodeVault" loading="lazy"
+                    style="object-fit: cover; width: 100%; height: 100%; position: absolute; z-index: -1;" />
                     <div class="d-flex flex-column h-100 p-5 text-white text-shadow-1">
                         <h3 class="pt-5 mt-auto display-6 lh-1 fw-bold">Badminton</h3>
                     </div>
@@ -534,6 +801,8 @@
 
             <div class="col default-col staggerHobby hiddenSlideX" data-bs-toggle="modal" data-bs-target="#danceModal">
                 <div class="neumorphism h-100 overflow-hidden rounded-4 hoverable" id="dance">
+                    <img src="./assets/hobbies/dance.JPG" alt="CodeVault" loading="lazy"
+                    style="object-fit: cover; width: 100%; height: 100%; position: absolute; z-index: -1;" />
                     <div class="d-flex flex-column h-100 p-5 text-white text-shadow-1">
                         <h3 class="pt-5 mt-auto display-6 lh-1 fw-bold">Dance</h3>
                     </div>
@@ -549,7 +818,9 @@
         </div>
     </div>
 
-    <!-- Footer -->
+    <!-- 
+    MARK: Footer 
+    -->
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
             <a href="#top" id="name"
@@ -588,7 +859,9 @@
         </footer>
     </div>
 
-    <!-- Modals -->
+    <!-- 
+    MARK: Modals 
+    -->
     <div class="modal fade" id="vscModal" tabindex="-1" aria-labelledby="vscModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-fullscreen-md-down">
             <div class="modal-content rounded-4 px-5 py-5 glass">
@@ -601,7 +874,7 @@
                     <p>
                         VSC (Valorant Store Tracker) was an open source iOS app that
                         allows you to track your store and preview your skins from the game
-                        <a href="https://playvalorant.com" class="text-decoration-none richLink fw-bold" style="white-space: nowrap;">Valorant</a>
+                        <a href="https://playvalorant.com" class="text-decoration-none richLink fw-bold" target="_blank" style="white-space: nowrap;">Valorant</a>
                         . It allowed
                         for easy on the go access to your otherwise hard to access skin
                         shop, a place to easily preview before buying, and an easy way to
@@ -618,7 +891,7 @@
                         experience and serves as the one of the cornerstones for my
                         experience in iOS development.
                     </p>
-                    <div class="my-3 me-2 d-flex justify-content-between align-items-center flex-wrap">
+                    <div class="my-3 d-flex justify-content-between align-items-center flex-wrap">
                         <div>
                             <ul class="d-flex align-items-center list-unstyled mb-0 flex-wrap">
                                 <li class="me-3 d-flex align-items-center">
@@ -644,15 +917,29 @@
                             </div>
                         </a>
                     </div>
-                    <section class="scrollport me-2">
-                        <img class="vscImage neumorphicButton" src="./assets/projects/ValorantStoreChecker/1.png" />
-                        <img class="vscImage neumorphicButton" src="./assets/projects/ValorantStoreChecker/2.png" />
-                        <img class="vscImage neumorphicButton" src="./assets/projects/ValorantStoreChecker/3.png" />
-                        <img class="vscImage neumorphicButton" src="./assets/projects/ValorantStoreChecker/4.png" />
-                        <img class="vscImage neumorphicButton" src="./assets/projects/ValorantStoreChecker/5.png" />
-                        <img class="vscImage neumorphicButton" src="./assets/projects/ValorantStoreChecker/6.png" />
-                        <img class="vscImage neumorphicButton" src="./assets/projects/ValorantStoreChecker/7.png" />
+                    <section class="scrollport" id="vscScrollport">
+                        <img class="vscImage neumorphicButton" src="./assets/projects/ValorantStoreChecker/1.png" loading="lazy"/>
+                        <img class="vscImage neumorphicButton" src="./assets/projects/ValorantStoreChecker/2.png" loading="lazy"/>
+                        <img class="vscImage neumorphicButton" src="./assets/projects/ValorantStoreChecker/3.png" loading="lazy"/>
+                        <img class="vscImage neumorphicButton" src="./assets/projects/ValorantStoreChecker/4.png" loading="lazy"/>
+                        <img class="vscImage neumorphicButton" src="./assets/projects/ValorantStoreChecker/5.png" loading="lazy"/>
+                        <img class="vscImage neumorphicButton" src="./assets/projects/ValorantStoreChecker/6.png" loading="lazy"/>
+                        <img class="vscImage neumorphicButton" src="./assets/projects/ValorantStoreChecker/7.png" loading="lazy"/>
                     </section>
+
+                    <div class="d-flex justify-content-end mt-3 position-relative">
+                        <button type="button" class="btn btn-light rounded-circle neumorphicButton me-2 p-2 lh-1 left2" style="width: 35px; height: 35px;">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left faded" viewBox="0 0 16 16">
+                             <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" stroke="currentColor" stroke-width="1.5"/>
+                           </svg>
+                         </button>
+                         <button type="button" class="btn btn-light rounded-circle neumorphicButton p-2 lh-1 right2" style="width: 35px; height: 35px;">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right faded" viewBox="0 0 16 16">
+                             <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" stroke="currentColor" stroke-width="1.5"/>
+                           </svg>
+                         </button>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -669,7 +956,7 @@
                     <h3 class="mb-0 fs-4 text-body-emphasis pb-2">Description</h3>
                     <p>
                         AI Game Agent is my deepest foray into AI, a project undertaken in the class 
-                        <a href="https://www.mcgill.ca/study/2024-2025/courses/comp-424" class="text-decoration-none richLink fw-bold" style="white-space: nowrap;">COMP 424</a>
+                        <a href="https://www.mcgill.ca/study/2024-2025/courses/comp-424" class="text-decoration-none richLink fw-bold" target="_blank" style="white-space: nowrap;">COMP 424</a>
                          Artificial Intelligence. It is an advanced AI
                         developed for a strategic two-player board game. In this game,
                         players move on a grid and place barriers to control space. This
@@ -724,7 +1011,7 @@
                             against opponents for each generation
                         </li>
                     </ul>
-                    <div class="my-3 me-2 d-flex justify-content-between align-items-center flex-wrap">
+                    <div class="my-3 d-flex justify-content-between align-items-center flex-wrap">
                         <ul class="d-flex align-items-center list-unstyled mb-0 flex-wrap">
                             <li class="me-3 d-flex align-items-center">
                                 <img src="./assets/logos/python.png" alt="Python" height="24"  class="me-2"/>
@@ -744,11 +1031,9 @@
                             </div>
                         </a>
                     </div>
-                    <div class="m-2">
-                        <video controls width="100%" class="rounded-4 neumorphicButton">
-                            <source src="./assets/projects/AIAgent/AIAgent.mp4" type="video/mp4" />
-                        </video>
-                    </div>
+                    <video controls width="100%" class="rounded-4 neumorphicButton">
+                        <source src="./assets/projects/AIAgent/AIAgent.mp4" type="video/mp4" />
+                    </video>
                 </div>
             </div>
         </div>
@@ -765,7 +1050,7 @@
                     <h3 class="mb-0 fs-4 text-body-emphasis pb-2">Description</h3>
                     <p>
                         CodeVault is a tool developed for the CSE challenge at the
-                        <a href="https://conuhacks.io" class="text-decoration-none richLink fw-bold" target="_blank  style="white-space: nowrap;">ConUHacks</a>
+                        <a href="https://conuhacks.io" class="text-decoration-none richLink fw-bold" target="_blank" style="white-space: nowrap;">ConUHacks</a>
                         <strong> 2023 hackathon</strong>, featuring a React web
                         app and an offline SwiftUI mobile app. It offers the latest
                         password generation and verification tools, providing users with
@@ -782,7 +1067,7 @@
                         we enhanced our React.js skills and improved our data parsing and
                         analysis capabilities.
                     </p>
-                    <div class="my-3 me-2 d-flex justify-content-between align-items-center flex-wrap">
+                    <div class="my-3 d-flex justify-content-between align-items-center flex-wrap">
                         <ul class="d-flex align-items-center list-unstyled mb-0 flex-wrap">
                             <li class="me-3 d-flex align-items-center">
                                 <img src="./assets/logos/swift.png" alt="Swift" height="24" class="me-2"/>
@@ -810,11 +1095,9 @@
                             </div>
                         </a>
                     </div>
-                    <div class="m-2">
-                        <video controls width="100%" class="rounded-4 neumorphicButton">
-                            <source src="./assets/projects/CodeVault/CodeVault.mp4" type="video/mp4" />
-                        </video>
-                    </div>
+                    <video controls width="100%" class="rounded-4 neumorphicButton">
+                        <source src="./assets/projects/CodeVault/CodeVault.mp4" type="video/mp4" />
+                    </video>
                 </div>
             </div>
         </div>
@@ -828,12 +1111,10 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="pauseAllVideos()"></button>
                 </div>
                 <div class="modal-body px-0">
-                    <div class="m-2">
-                        <video controls width="100%" class="rounded-4 neumorphicButton">
-                            <source src="./assets/hobbies/dance.mp4" type="video/mp4" />
-                        </video>
-                    </div>
-                    <div class="my-3 mx-2 d-flex justify-content-end flex-wrap">
+                    <video controls width="100%" class="rounded-4 neumorphicButton">
+                        <source src="./assets/hobbies/dance.mp4" type="video/mp4" />
+                    </video>
+                    <div class="my-3 d-flex justify-content-end flex-wrap">
                         <a href="https://youtu.be/Tn0YmC7uBQw?si=rVTDo-dNHnG3d7rl" target="_blank"
                             class="btn btn-outline-danger neumorphicButton my-1">
                             <div class="d-flex align-items-center">
