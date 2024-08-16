@@ -5,6 +5,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    overscroll-behavior-x: none;
+}
+
 #name {
     font-weight: bold;
 }
@@ -64,6 +68,7 @@ html {
     padding: 0 .25rem;
     margin: 0 -.25rem;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    cursor: pointer;
 }
 
 .richLink:hover {
@@ -129,8 +134,9 @@ html {
 
 /* Hovering animation */
 .hoverable {
-    transition: transform 0.25s;
+    transition: transform 0.5s;
     will-change: transform;
+    cursor: pointer;
 }
   
 .hoverable:hover {
@@ -294,7 +300,6 @@ html {
     transition-duration: 1s !important;
 }
 
-
 /*  
     MARK:Projects section 
 */
@@ -311,7 +316,12 @@ html {
 
 .proj-col {
     min-height: 700px; 
-} 
+}
+
+.projColSm {
+    min-height: 279px; 
+    width: 330px !important;
+}
 
 /*
     MARK: Scrollport section
@@ -321,7 +331,6 @@ html {
     overflow-x: scroll;
     overflow-y: hidden;
     height: 100%;
-    white-space:nowrap
 }
 
 .scrollport::-webkit-scrollbar {
@@ -332,8 +341,6 @@ html {
     mask-image: linear-gradient(to right, black 2%, black 98%, transparent);
     padding-left: 10px;
     padding-right: 10px;
-    /* margin-left: -10px !important;
-    margin-right: -10px !important; */
 }
 
 #vscScrollport.masked {
@@ -345,6 +352,7 @@ html {
 }
 
 #projectsScrollport {
+    transition: mask-image 0.3s ease-out;
     mask-image: linear-gradient(to right,
         black calc(2% + 50px), 
         black calc(98% - 48px), 

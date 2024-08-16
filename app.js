@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   
     // Setup for projectsScrollport with 20px left padding
-    setupScrollport('projectsScrollport', 'left1', 'right1', '.col-11', 0);
+    setupScrollport('projectsScrollport', 'left1', 'right1', '.projColSm', 0);
   
     // Setup for vscScrollport with 10px left padding
     setupScrollport('vscScrollport', 'left2', 'right2', '.vscImage', 10);
