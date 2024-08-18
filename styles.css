@@ -456,6 +456,12 @@ body {
     }
 }
 
+@media screen and (max-width: 1200px) {
+    .staggerProject:nth-child(4) {
+        transition: none !important;
+    }
+}
+
 /* up to md included */
 @media screen and (max-width: 991px) {
     /* Profile Styles */
@@ -491,18 +497,14 @@ body {
     }
 }
 
-/* For landscape mode on phones */
-/* up to md included width, up to xs included height */
-@media (max-width: 991px) and (max-height: 575px) and (orientation: landscape) {
-    #profile {
-        min-height: 150vh;
-    }
-}
-
 /* up to sm included */
 @media screen and (max-width: 767px) {
     .staggerAbout:nth-child(2) {
         transition-delay: 0s;
+    }
+
+    .staggerProject:nth-child(3) {
+        transition: none !important;
     }
 }
 
@@ -527,6 +529,12 @@ body {
     .title {
         font-size: 2rem;
     }
+}
 
-    
+/* For landscape mode on phones */
+/* up to md included width, up to xs included height */
+@media (max-width: 991px) and (max-height: 575px) and (orientation: landscape) {
+    #profile {
+        min-height: 150vh;
+    }
 }
