@@ -107,11 +107,42 @@ const observerBlur = new IntersectionObserver((entries) => {
 // SlideX
 const observerSlideX = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("showSlideX");
+      if (entry.isIntersecting) {
+        entry.target.classList.add("showSlideX");
+        
+        if (entry.target.classList.contains("staggerProject")) {
+          const childNumber = Array.from(entry.target.parentNode.children).indexOf(entry.target);
+          let delay;
+          switch (childNumber) {
+            case 1:
+              delay = 1200; // Delay for the second staggerProject
+              break;
+            case 2:
+              delay = 2000; // Delay for the third staggerProject
+              break;
+            case 3:
+                delay = 2800; // Delay for the third staggerProject
+                break;
+            default:
+              delay = 0; // No delay for other children
+              break;
+          }
+          setTimeout(() => {
+            entry.target.classList.remove("staggerProject");
+          }, delay);
+        } 
+        
+        else if (entry.target.classList.contains("staggerHobby")) {
+          const childNumber = Array.from(entry.target.parentNode.children).indexOf(entry.target);
+          if (childNumber === 0) {
+            setTimeout(() => {
+              entry.target.classList.remove("staggerHobby");
+            }, 1200);
+          }
         }
+      }
     });
-});
+  });
 
 // Observe
 const hiddenElementsSlideY = document.querySelectorAll(".hiddenSlideY");
