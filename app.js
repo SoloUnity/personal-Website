@@ -140,6 +140,7 @@ const observerSlideX = new IntersectionObserver((entries) => {
           }
           setTimeout(() => {
             entry.target.classList.remove("staggerProject");
+            entry.target.classList.add("hoverable");
           }, delay);
         } 
         
@@ -148,6 +149,7 @@ const observerSlideX = new IntersectionObserver((entries) => {
           if (childNumber === 0) {
             setTimeout(() => {
               entry.target.classList.remove("staggerHobby");
+              entry.target.classList.add("hoverable");
             }, 1200);
           }
         }
