@@ -1,6 +1,12 @@
-/* Global Styles */
+/* 
+    MARK: Global Styles 
+*/
 html {
     scroll-behavior: smooth;
+}
+
+body {
+    overscroll-behavior-x: none;
 }
 
 #name {
@@ -28,7 +34,9 @@ html {
     margin-bottom: 0.3em;
 }
 
-/* Design paradigms */
+/* 
+    MARK: Design paradigms 
+*/
 .glass {
     background: rgba( 255, 255, 255, 0.85) !important;
     backdrop-filter: blur( 20px ) !important;
@@ -51,13 +59,16 @@ html {
     filter: drop-shadow(1px 1px 1px #a6a6a6) drop-shadow(-1px -1px 2px #ffffff);
 }
 
-/* Hyperlink styling */
+/* 
+    MARK: Hyperlink styling 
+*/
 .richLink {
     box-shadow: inset 0 0 0 0 #54b3d6;
     color: #54b3d6;
     padding: 0 .25rem;
     margin: 0 -.25rem;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    cursor: pointer;
 }
 
 .richLink:hover {
@@ -65,6 +76,9 @@ html {
     box-shadow: inset 200px 0 0 0 #54b3d6;
 }
 
+/*  
+    MARK: Animations
+*/
 /* Scrolling animation */
 .hiddenBlur {
     opacity: 0;
@@ -118,6 +132,18 @@ html {
     }
 }
 
+/* Hovering animation */
+.hoverable {
+    transition: transform 0.4s;
+    will-change: transform;
+    cursor: pointer;
+}
+  
+.hoverable:hover {
+    transform: scale(1.015);
+    position: relative;
+}
+
 /* Stagger Animation */
 .staggerAbout:nth-child(2) {
     transition-delay: 0.2s;
@@ -137,6 +163,18 @@ html {
     transition-delay: 0.4s;
 }
 
+.staggerProject:nth-child(2) {
+    transition: opacity 1.2s, transform 1.2s, filter 1.2s !important;
+}
+
+.staggerProject:nth-child(3) {
+    transition: opacity 2.0s, transform 2.0s, filter 2.0s !important;
+}
+
+.staggerProject:nth-child(4) {
+    transition: opacity 2.8s, transform 2.8s, filter 2.8s !important;
+}
+
 /* Anchor scrolling */
 #About {
     scroll-margin-top: 125px;
@@ -154,7 +192,9 @@ html {
     scroll-margin-top: 125px;
 }
 
-/* Navbar section*/
+/* 
+    MARK: Navbar section
+*/
 #Navbar {
     border-radius: 10px;
 }
@@ -214,7 +254,9 @@ html {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(134, 136, 138, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-/* Profile section */
+/* 
+    MARK: Profile section 
+*/
 .btn-light {
     --bs-btn-hover-border-color: none !important;
     --bs-btn-border-color: none !important;
@@ -270,7 +312,142 @@ html {
     transition-duration: 1s !important;
 }
 
+/*  
+    MARK:Projects section 
+*/
+/* Skill Circles */
+.rounded-circle {
+    padding: 2px; 
+    object-fit: contain;
+}
+  
+/* Card Heights */
+.default-col {
+    min-height: 450px;
+}
 
+.proj-col {
+    min-height: 700px; 
+}
+
+.projColSm {
+    min-height: 279px; 
+    width: 330px !important;
+    position: relative;
+}
+
+/*
+    MARK: Scrollport section
+*/
+
+.scrollport {
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 100%;
+    white-space: nowrap;
+}
+
+.scrollport::-webkit-scrollbar {
+    display: none;
+}
+
+#vscScrollport {
+    mask-image: linear-gradient(to right, black 2%, black 98%, transparent);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#vscScrollport.masked {
+    mask-image: linear-gradient(to right, transparent, black 2%, black 98%, transparent);
+}
+
+#vscScrollport.maskedStart {
+    mask-image: linear-gradient(to right, transparent, black 2%, black 98%);
+}
+
+#projectsScrollport {
+    transition: mask-image 0.3s ease-out;
+    mask-image: linear-gradient(to right,
+        black calc(2% + 50px), 
+        black calc(98% - 48px), 
+        transparent calc(100% - 48px)
+    );  
+    padding-bottom: 100px; 
+    margin-bottom: -100px;
+    padding-top: 40px; 
+    margin-top: -40px;
+    padding-left: 50px;
+    margin-left: -62px;
+    padding-right: 50px;
+    margin-right: -62px;
+}
+
+#projectsScrollport.masked {
+    mask-image: linear-gradient(to right,
+        transparent 50px,
+        black calc(2% + 50px), 
+        black calc(98% - 48px), 
+        transparent calc(100% - 48px)
+    );  
+}
+
+#projectsScrollport.maskedStart {
+    mask-image: linear-gradient(to right,
+        transparent 50px,
+        black calc(2% + 50px), 
+        black calc(98% - 48px)
+    );
+    padding-right: 100px;
+    margin-right: -112px;
+}
+
+/*  
+    MARK: Modals section 
+*/
+.modal.fade .modal-header {
+    border-bottom: none;
+    --bs-modal-header-padding: 0rem;
+}
+
+.modal-body {
+    padding: 0px !important;
+    overflow: visible !important;
+}
+
+.modal-content {
+    height: max-content !important;
+}
+
+.vscImage:not(:first-of-type):not(:last-of-type) {
+    max-height: 500px;
+    border-radius: 20px;
+    margin: 8px;
+}
+
+.vscImage:first-of-type {
+    max-height: 500px;
+    border-radius: 20px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-right: 8px;
+}
+
+.vscImage:last-of-type {
+    max-height: 500px;
+    border-radius: 20px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+}
+
+.AgentImage {
+    width: 100%;
+    object-fit: contain;
+}
+
+/*  
+    MARK: Media Queries
+*/
 /* up to xxl included */
 @media screen and (max-width: 1400px) {
     /* Profile Section Styles */
@@ -290,9 +467,6 @@ html {
     section {
         height: fit-content;
         padding-top: 20vh;
-    }
-    section {
-        margin: 0 5%;
     }
     /* Section Picture Container Styles */
     .picContainer {
@@ -356,111 +530,3 @@ html {
 
     
 }
-
-/* Projects section */
-/* Card hovering */
-.hoverable {
-    transition: transform 0.25s;
-    will-change: transform;
-}
-  
-.hoverable:hover {
-    transform: scale(1.015);
-    position: relative;
-}
-
-/* Skill Circles */
-.rounded-circle {
-    padding: 2px; 
-    object-fit: contain;
-}
-  
-/* Card Heights */
-.default-col {
-    min-height: 450px;
-}
-
-.proj-col {
-    min-height: 700px; 
-} 
-
-/* Project Cards */
-#vsc {
-    background-image: url('./assets/projects/ValorantStoreChecker/VSC.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    object-fit: contain;
-
-}
-
-#aiagent {
-    background-image: url('./assets/projects/AIAgent/AIAgent.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    object-fit: contain;
-
-}
-
-#codevault {
-    background-image: url('./assets/projects/CodeVault/CodeVault.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    object-fit: contain;
-
-}
-
-/* Hobbies section */
-#badminton {
-    background-image: url('./assets/hobbies/badminton.jpeg');
-}
-#dance {
-    background-image: url('./assets/hobbies/dance.JPG'); 
-    background-position: center;
-}
-
-/* Modals section */
-.modal.fade .modal-header {
-    border-bottom: none;
-    --bs-modal-header-padding: 0rem;
-}
-
-.modal-body {
-    padding: 0px !important;
-}
-
-.scrollport {
-    mask-image: linear-gradient(to right, transparent, black 2%, black 98%, transparent);
-    overflow-x: auto;
-    overflow-y: hidden;
-    overscroll-behavior-x: contain;
-    display: flex;
-    gap: var(--size-10);
-    align-items: start;
-    padding: var(--size-10);
-    margin-left: 0px;
-    margin-right: 0px;
-    white-space: nowrap;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-.scrollport::-webkit-scrollbar {
-    display: none;
-}
-
-.vscImage {
-    max-height: 500px;
-    border-radius: 20px;
-    margin: 8px;
-}
-
-.AgentImage {
-    width: 100%;
-    object-fit: contain;
-}
-
