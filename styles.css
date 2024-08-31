@@ -271,8 +271,9 @@ body {
 #profile {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 5rem;
-    height: 95vh;
+    height: 100vh;
 }
 
 #picture {
@@ -448,13 +449,6 @@ body {
 /*  
     MARK: Media Queries
 */
-/* up to xxl included */
-@media screen and (max-width: 1400px) {
-    /* Profile Section Styles */
-    #profile {
-        height: 100vh;
-    }
-}
 
 @media screen and (max-width: 1200px) {
     .staggerProject:nth-child(4) {
@@ -467,7 +461,6 @@ body {
     /* Profile Styles */
     #profile{
         display: block;
-        height: 100vh;
     }
     /* Section Styles */
     section {
