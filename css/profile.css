@@ -1,0 +1,58 @@
+/* 
+    MARK: Profile section 
+*/
+.btn-light {
+    --bs-btn-hover-border-color: none !important;
+    --bs-btn-border-color: none !important;
+    --bs-btn-bg: #ffffff !important;
+}
+
+.dropdown-menu {
+    --bs-dropdown-border-color: none !important;
+    --bs-dropdown-link-active-bg: #54b3d6!important;
+}
+
+#profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    height: 100vh;
+}
+
+#picture {
+    border-radius: 50%;
+}
+
+.section-container {
+    display: flex;
+}
+
+.picContainer {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+
+.text {
+    align-self: center;
+    text-align: center;
+}
+
+.text p {
+    font-weight: 600;
+}
+
+.text1{
+    text-align: center;
+}
+
+.text2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.carousel-item {
+    transition-duration: 1s !important;
+}

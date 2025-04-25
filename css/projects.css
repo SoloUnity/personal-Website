@@ -1,0 +1,23 @@
+/*  
+    MARK:Projects section 
+*/
+/* Skill Circles */
+.rounded-circle {
+    padding: 2px; 
+    object-fit: contain;
+}
+  
+/* Card Heights */
+.default-col {
+    min-height: 450px;
+}
+
+.proj-col {
+    min-height: 700px; 
+}
+
+.projColSm {
+    min-height: 279px; 
+    width: 330px !important;
+    position: relative;
+}

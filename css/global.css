@@ -1,0 +1,35 @@
+/* 
+    MARK: Global Styles 
+*/
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overscroll-behavior-x: none;
+}
+
+#name {
+    font-weight: bold;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.icon {
+    cursor: pointer;
+    height: 2rem;
+}
+
+.faded {
+    color: rgb(85, 85, 85);
+}
+
+.emoji {
+    width: 1.2em;
+    margin-left: 0.1em; 
+    margin-right: 0.1em; 
+    margin-bottom: 0.3em;
+}
