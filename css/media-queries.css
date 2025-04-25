@@ -1,0 +1,85 @@
+/*  
+    MARK: Media Queries
+*/
+
+@media screen and (max-width: 1200px) {
+    .staggerProject:nth-child(4) {
+        transition: none !important;
+    }
+}
+
+/* up to md included */
+@media screen and (max-width: 991px) {
+    /* Profile Styles */
+    #profile{
+        display: block;
+    }
+    /* Section Styles */
+    section {
+        height: fit-content;
+        padding-top: 20vh;
+    }
+    /* Section Picture Container Styles */
+    .picContainer {
+        width: 275px;
+        height: 275px;
+        margin: 0 auto 2rem;
+    }
+
+    /* Scroll animation */
+    .staggerSkill:nth-child(2) {
+        transition-delay: 0s;
+    }
+    .staggerSkill:nth-child(4) {
+        transition-delay: 0s;
+    }
+
+    .staggerHobby:nth-child(2) {
+        transition-delay: 0s;
+    }
+    .staggerHobby:nth-child(3) {
+        transition-delay: 0s;
+    }
+}
+
+/* up to sm included */
+@media screen and (max-width: 767px) {
+    .staggerAbout:nth-child(2) {
+        transition-delay: 0s;
+    }
+
+    .staggerProject:nth-child(3) {
+        transition: none !important;
+    }
+}
+
+/* up to xs included */
+@media screen and (max-width: 575px) {
+    /* Button Container Styles */
+    .btn-container {
+        flex-wrap: wrap;
+    }
+
+    /* Section Picture Container Styles */
+    .picContainer {
+        width: auto;
+        height: 46vw;
+        justify-content: center;
+    }
+    /* Section Text Styles */
+    .text2{
+        font-size: 1.25rem;
+    }
+    /* Title Styles */
+    .title {
+        font-size: 2rem;
+    }
+}
+
+/* For landscape mode on phones */
+/* up to md included width, up to xs included height */
+@media (max-width: 991px) and (max-height: 575px) and (orientation: landscape) {
+    #profile {
+        min-height: 150vh;
+    }
+}

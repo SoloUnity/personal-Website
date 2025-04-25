@@ -1,0 +1,64 @@
+/*
+    MARK: Scrollport section
+*/
+
+.scrollport {
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 100%;
+    white-space: nowrap;
+}
+
+.scrollport::-webkit-scrollbar {
+    display: none;
+}
+
+#vscScrollport {
+    mask-image: linear-gradient(to right, black 2%, black 98%, transparent);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#vscScrollport.masked {
+    mask-image: linear-gradient(to right, transparent, black 2%, black 98%, transparent);
+}
+
+#vscScrollport.maskedStart {
+    mask-image: linear-gradient(to right, transparent, black 2%, black 98%);
+}
+
+#projectsScrollport {
+    transition: mask-image 0.3s ease-out;
+    mask-image: linear-gradient(to right,
+        black calc(2% + 50px), 
+        black calc(98% - 48px), 
+        transparent calc(100% - 48px)
+    );  
+    padding-bottom: 100px; 
+    margin-bottom: -100px;
+    padding-top: 40px; 
+    margin-top: -40px;
+    padding-left: 50px;
+    margin-left: -62px;
+    padding-right: 50px;
+    margin-right: -62px;
+}
+
+#projectsScrollport.masked {
+    mask-image: linear-gradient(to right,
+        transparent 50px,
+        black calc(2% + 50px), 
+        black calc(98% - 48px), 
+        transparent calc(100% - 48px)
+    );  
+}
+
+#projectsScrollport.maskedStart {
+    mask-image: linear-gradient(to right,
+        transparent 50px,
+        black calc(2% + 50px), 
+        black calc(98% - 48px)
+    );
+    padding-right: 100px;
+    margin-right: -112px;
+}

@@ -1,0 +1,43 @@
+/*  
+    MARK: Modals section 
+*/
+.modal.fade .modal-header {
+    border-bottom: none;
+    --bs-modal-header-padding: 0rem;
+}
+
+.modal-body {
+    padding: 0px !important;
+    overflow: visible !important;
+}
+
+.modal-content {
+    height: max-content !important;
+}
+
+.vscImage:not(:first-of-type):not(:last-of-type) {
+    max-height: 500px;
+    border-radius: 20px;
+    margin: 8px;
+}
+
+.vscImage:first-of-type {
+    max-height: 500px;
+    border-radius: 20px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-right: 8px;
+}
+
+.vscImage:last-of-type {
+    max-height: 500px;
+    border-radius: 20px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+}
+
+.AgentImage {
+    width: 100%;
+    object-fit: contain;
+}
