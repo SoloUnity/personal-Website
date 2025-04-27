@@ -1,4 +1,13 @@
 document.addEventListener('fragmentsLoaded', () => {
+
+  // Lazy loading for images and videos
+  document.querySelectorAll('img').forEach(img => {
+    if (!img.getAttribute('loading')) img.setAttribute('loading', 'lazy');
+  });
+  document.querySelectorAll('video').forEach(video => {
+    video.setAttribute('preload', 'none');
+  });
+
   // Mask application
   function setupHorizontalScroll(elementId) {
     const scrollElement = document.querySelector(elementId);
