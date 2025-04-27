@@ -1,0 +1,99 @@
+<div class="modal fade" id="aiagentModal" tabindex="-1" aria-labelledby="aiagentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-fullscreen-md-down">
+        <div class="modal-content rounded-4 px-5 py-5 glass">
+            <div class="modal-header d-flex justify-content-between align-items-start">
+                <h3 class="mb-4 display-6 lh-1 fw-bold">AI Game Agent</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                    onclick="pauseAllVideos()"></button>
+            </div>
+            <div class="modal-body px-0">
+                <h3 class="mb-0 fs-4 text-body-emphasis pb-2">Description</h3>
+                <p>
+                    AI Game Agent is my deepest foray into AI, a project undertaken in the class
+                    <a href="https://www.mcgill.ca/study/2024-2025/courses/comp-424"
+                        class="text-decoration-none richLink fw-bold" target="_blank"
+                        style="white-space: nowrap;">COMP 424</a>
+                    Artificial Intelligence. It is an advanced AI
+                    developed for a strategic two-player board game. In this game,
+                    players move on a grid and place barriers to control space.
+                    The goal of the game is to wall off a maximum area of the board, with each tile counting as a
+                    point.
+                    This
+                    game agent achieved a
+                    <span class="fw-bold">90th percentile</span> score in a round
+                    robin tournament against other agents designed by my peers. AI Game
+                    Agent uses sophisticated game theory algorithms and heuristics to
+                    make intelligent decisions. These include:
+                </p>
+                <ul>
+                    <li>Alpha-beta pruning with a transposition table</li>
+                    <li>Iterative deepening search strategies</li>
+                    <li>
+                        Genetic algorithm with crossover and mutation to train heuristic
+                        weights
+                    </li>
+                </ul>
+                <p>
+                    These methods enable efficient exploration of possible moves,
+                    optimizing decisions within limited time frames. Custom heuristic
+                    functions assess the game state from various strategic
+                    perspectives such as expansion potential, aggression, positional
+                    advantage, and barrier extension. These heuristics are weighted
+                    and combined to form a comprehensive evaluation of each move,
+                    making AI Game Agent a competitive and adaptable AI for grid-based
+                    board games. The genetic algorithm optimizes the heuristic weights
+                    of AI Game Agent. Key features include:
+                </p>
+                <ul>
+                    <li>
+                        A robust evolutionary approach fine-tuning decision-making
+                        against various enemy strategies
+                    </li>
+                    <li>
+                        Customizable parameters including population size, mutation and
+                        crossover rates, and number of weights
+                    </li>
+                    <li>
+                        Fitness evaluation based on performance against diverse enemy
+                        agents
+                    </li>
+                    <li>
+                        Evolutionary operations utilizing two-point crossover, Gaussian
+                        mutation, and tournament selection
+                    </li>
+                    <li>
+                        Diversity maintenance by periodically reintroducing successful
+                        individuals to the population
+                    </li>
+                    <li>
+                        Detailed logging to track best weights and win percentages
+                        against opponents for each generation
+                    </li>
+                </ul>
+                <div class="my-3 d-flex justify-content-between align-items-center flex-wrap">
+                    <ul class="d-flex align-items-center list-unstyled mb-0 flex-wrap">
+                        <li class="me-3 d-flex align-items-center">
+                            <img src="./assets/logos/python.png" alt="Python" height="24" class="me-2" />
+                            <strong>Python</strong>
+                        </li>
+                    </ul>
+                    <a href="https://github.com/SoloUnity/colosseum-survival-ai" target="_blank"
+                        class="btn btn-dark neumorphicButton my-1">
+                        <div style="display: flex; cursor: pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-github" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8">
+                                </path>
+                            </svg>
+                            <span class="ms-2">GitHub</span>
+                        </div>
+                    </a>
+                </div>
+                <video controls width="100%" class="rounded-4 neumorphicButton">
+                    <source src="./assets/projects/AIAgent/AIAgent.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
