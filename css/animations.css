@@ -25,27 +25,16 @@
 }
 
 .hiddenSlideY {
-    position: relative;
     opacity: 0;
+    filter: blur(5px); /* Add blur like SlideX */
     transform: translateY(-100%);
-    transition: opacity 1s, transform 1s;
-}
-
-.hiddenSlideY::before {
-    content: '';
-    position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
-    backdrop-filter: blur(5px);
-    transition: opacity 1s;
+    transition: opacity 1s, transform 1s, filter 1s; /* Add filter transition */
 }
 
 .showSlideY {
     opacity: 1;
+    filter: blur(0); /* Remove blur */
     transform: translateY(0);
-}
-
-.showSlideY::before {
-    opacity: 0;
 }
 
 @media(prefers-reduced-motion) {
