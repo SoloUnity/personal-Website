@@ -2,14 +2,37 @@
     MARK: Profile section 
 */
 .btn-light {
-    --bs-btn-hover-border-color: none !important;
-    --bs-btn-border-color: none !important;
-    --bs-btn-bg: #ffffff !important;
+    --bs-btn-hover-border-color: var(--btn-light-hover-border-color) !important;
+    --bs-btn-border-color: var(--btn-light-border-color) !important;
+    --bs-btn-bg: var(--btn-light-bg) !important;
+    --bs-btn-color: var(--text-color) !important; /* Use text color variable */
+    --bs-btn-hover-color: var(--text-color) !important; /* Ensure text color stays */
+    --bs-btn-active-color: var(--text-color) !important; /* Ensure text color stays */
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, color 0.15s ease-in-out; /* Add transition */
 }
 
 .dropdown-menu {
-    --bs-dropdown-border-color: none !important;
-    --bs-dropdown-link-active-bg: #54b3d6!important;
+    --bs-dropdown-border-color: var(--dropdown-border-color) !important;
+    --bs-dropdown-link-active-bg: var(--dropdown-link-active-bg) !important;
+    --bs-dropdown-bg: var(--dropdown-bg) !important;
+    --bs-dropdown-link-color: var(--text-color) !important;
+    --bs-dropdown-link-hover-color: var(--text-color) !important;
+    --bs-dropdown-link-hover-bg: rgba(0, 0, 0, 0.1) !important; /* Subtle hover */
+    --bs-dropdown-link-active-color: var(--primary-text-color) !important;
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Add transition */
+}
+
+/* Ensure dropdown items use correct text color */
+.dropdown-item {
+    color: var(--bs-dropdown-link-color);
+}
+.dropdown-item:hover, .dropdown-item:focus {
+    color: var(--bs-dropdown-link-hover-color);
+    background-color: var(--bs-dropdown-link-hover-bg);
+}
+.dropdown-item.active, .dropdown-item:active {
+    color: var(--bs-dropdown-link-active-color);
+    background-color: var(--bs-dropdown-link-active-bg);
 }
 
 #profile {

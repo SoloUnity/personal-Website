@@ -16,7 +16,78 @@ function loadVideo(video) {
   }
 }
 
+// --- Dark Mode Logic ---
+const themeToggle = document.getElementById('darkModeSwitch');
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+// Apply the saved theme or system preference on initial load
+function applyTheme(theme) {
+  if (theme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+    if (themeToggle) themeToggle.checked = true;
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+    if (themeToggle) themeToggle.checked = false;
+  }
+}
+
+if (currentTheme) {
+  applyTheme(currentTheme);
+} else if (prefersDarkScheme.matches) {
+  applyTheme('dark');
+} else {
+  applyTheme('light'); // Default to light
+}
+
+// Listener for toggle switch
+if (themeToggle) {
+  themeToggle.addEventListener('change', function () {
+    if (this.checked) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+      localStorage.setItem('theme', 'light');
+    }
+  });
+}
+
+// Listener for system preference changes
+prefersDarkScheme.addEventListener('change', (e) => {
+  // Only change if no user preference is stored
+  if (!localStorage.getItem('theme')) {
+    applyTheme(e.matches ? 'dark' : 'light');
+  }
+});
+// --- End Dark Mode Logic ---
+
 document.addEventListener("fragmentsLoaded", () => {
+  // Re-select the theme toggle after fragments are loaded, as it might be inside a fragment
+  const themeToggleLoaded = document.getElementById('darkModeSwitch');
+  const currentThemeLoaded = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+  // Re-apply theme state to the newly loaded toggle
+  if (themeToggleLoaded) {
+    if (document.documentElement.getAttribute('data-theme') === 'dark') {
+      themeToggleLoaded.checked = true;
+    } else {
+      themeToggleLoaded.checked = false;
+    }
+
+    // Re-attach listener if it wasn't attached before fragments loaded
+    if (!themeToggle) { // Check if the initial themeToggle was null
+      themeToggleLoaded.addEventListener('change', function () {
+        if (this.checked) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    }
+  }
 
   // Lazy loading for images and videos
   document.querySelectorAll("img").forEach(img => {
@@ -131,18 +202,18 @@ document.addEventListener("fragmentsLoaded", () => {
   setupScrollport("projectsScrollport", "left1", "right1", ".projColSm", 40);
   setupScrollport("vscScrollport", "left2", "right2", ".vscImage", 10);
 
-  // Moal video handling
-  const videoModals = document.querySelectorAll('.modal'); 
+  // Modal video handling
+  const videoModals = document.querySelectorAll('.modal');
 
   videoModals.forEach(modal => {
     const video = modal.querySelector('video');
     if (video) { // Only add listeners if the modal contains a video
       // Ensure the video doesn't have a src initially if preload="none"
       if (video.getAttribute('preload') === 'none') {
-         const sourceTag = video.querySelector('source');
-         if (sourceTag && sourceTag.getAttribute('src')) {
-             video.removeAttribute('src'); 
-         }
+        const sourceTag = video.querySelector('source');
+        if (sourceTag && sourceTag.getAttribute('src')) {
+          video.removeAttribute('src');
+        }
       }
 
       modal.addEventListener('show.bs.modal', () => {

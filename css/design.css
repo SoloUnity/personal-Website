@@ -2,23 +2,27 @@
     MARK: Design paradigms 
 */
 .glass {
-    background: rgba( 255, 255, 255, 0.85) !important;
-    backdrop-filter: blur( 20px ) !important;
-    -webkit-backdrop-filter: blur( 20px ) !important;
+    background: var(--glass-bg) !important;
+    backdrop-filter: blur( var(--glass-blur) ) !important;
+    -webkit-backdrop-filter: blur( var(--glass-blur) ) !important;
+    transition: background-color 0.3s ease; /* Add transition */
 }
 
 .neumorphism {
-    background: #ffffff;
-    box-shadow:  20px 20px 60px #a6a6a6,
-                -20px -20px 60px #ffffff;
+    background: var(--neumorphic-bg);
+    box-shadow:  20px 20px 60px var(--neumorphic-shadow-dark),
+                -20px -20px 60px var(--neumorphic-shadow-light);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Add transition */
 }
 
 .neumorphicButton {
-    /* background: #ffffff; */
-    box-shadow:  3px 3px 8px #a6a6a6,
-                -3px -3px 8px #ffffff !important;
+    /* background: var(--neumorphic-bg); /* Use theme background */
+    box-shadow:  3px 3px 8px var(--neumorphic-shadow-dark),
+                -3px -3px 8px var(--neumorphic-shadow-light) !important;
+    transition: box-shadow 0.3s ease; /* Add transition */
 }
 
 .neumorphicIMG {
-    filter: drop-shadow(1px 1px 1px #a6a6a6) drop-shadow(-1px -1px 2px #ffffff);
+    filter: drop-shadow(1px 1px 1px var(--neumorphic-img-shadow-dark)) drop-shadow(-1px -1px 2px var(--neumorphic-img-shadow-light));
+    transition: filter 0.3s ease; /* Add transition */
 }

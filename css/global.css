@@ -1,17 +1,105 @@
 /* 
     MARK: Global Styles 
 */
+
+/* Define CSS variables for light and dark themes */
+:root {
+    --body-bg: #ffffff;
+    --text-color: #212529; /* Bootstrap default text color */
+    --secondary-text-color: rgb(85, 85, 85);
+    --primary-color: #54b3d6;
+    --primary-hover-color: #4392b5;
+    --primary-active-color: #3f89aa;
+    --primary-text-color: #fff;
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --glass-blur: 20px;
+    --neumorphic-bg: #ffffff;
+    --neumorphic-shadow-light: #ffffff;
+    --neumorphic-shadow-dark: #a6a6a6;
+    --neumorphic-img-shadow-light: #ffffff;
+    --neumorphic-img-shadow-dark: #a6a6a6;
+    --link-color: #54b3d6;
+    --link-hover-bg: #54b3d6;
+    --link-hover-text: #fff;
+    --card-bg: #ffffff;
+    --modal-content-bg: #ffffff;
+    --dropdown-bg: #ffffff;
+    --dropdown-border-color: transparent; /* Use transparent instead of none */
+    --dropdown-link-active-bg: #54b3d6;
+    --btn-light-bg: #ffffff;
+    --btn-light-border-color: transparent;
+    --btn-light-hover-border-color: transparent;
+    --scrollbar-thumb-bg: rgba(0, 0, 0, 0.2);
+    --scrollbar-track-bg: rgba(0, 0, 0, 0.1);
+    --toggler-icon-stroke: rgba(134, 136, 138, 1); /* Navbar toggler icon color */
+    --form-switch-bg: #eee; /* Default background for the switch */
+    --form-switch-checked-bg: var(--primary-color);
+    --form-switch-border-color: rgba(0, 0, 0, 0.25);
+}
+
+[data-theme="dark"] {
+    --body-bg: #1a1a1a;
+    --text-color: #e0e0e0;
+    --secondary-text-color: #aaaaaa;
+    --primary-color: #64c4e8;
+    --primary-hover-color: #7acff0;
+    --primary-active-color: #8ad9f2;
+    --primary-text-color: #121212;
+    --glass-bg: rgba(30, 30, 30, 0.85);
+    --glass-blur: 15px; /* Slightly less blur for dark mode potentially */
+    --neumorphic-bg: #1a1a1a;
+    --neumorphic-shadow-light: #2a2a2a;
+    --neumorphic-shadow-dark: #0e0e0e;
+    --neumorphic-img-shadow-light: #2a2a2a;
+    --neumorphic-img-shadow-dark: #000000;
+    --link-color: #64c4e8;
+    --link-hover-bg: #64c4e8;
+    --link-hover-text: #121212;
+    --card-bg: #2a2a2a;
+    --modal-content-bg: #2a2a2a;
+    --dropdown-bg: #2a2a2a;
+    --dropdown-border-color: #444;
+    --dropdown-link-active-bg: #64c4e8;
+    --btn-light-bg: #333333;
+    --btn-light-border-color: #444;
+    --btn-light-hover-border-color: #555;
+    --scrollbar-thumb-bg: rgba(255, 255, 255, 0.3);
+    --scrollbar-track-bg: rgba(255, 255, 255, 0.1);
+    --toggler-icon-stroke: rgba(200, 200, 200, 1);
+    --form-switch-bg: #444;
+    --form-switch-checked-bg: var(--primary-color);
+    --form-switch-border-color: rgba(255, 255, 255, 0.25);
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
     overscroll-behavior-x: none;
+    background-color: var(--body-bg) !important;
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Apply theme variables to scrollbar */
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--scrollbar-track-bg);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-bg);
+    border-radius: 4px;
 }
 
 .title {
     font-size: 3rem;
     text-align: center;
+    color: var(--text-color);
 }
 
 .icon {
@@ -20,12 +108,40 @@ body {
 }
 
 .faded {
-    color: rgb(85, 85, 85);
+    color: var(--secondary-text-color);
 }
 
 .emoji {
     width: 1.2em;
-    margin-left: 0.1em; 
-    margin-right: 0.1em; 
+    margin-left: 0.1em;
+    margin-right: 0.1em;
     margin-bottom: 0.3em;
+}
+
+/* Style the dark mode toggle switch */
+.form-switch .form-check-input {
+    cursor: pointer;
+    background-color: var(--form-switch-bg);
+    border-color: var(--form-switch-border-color);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='rgba(0,0,0,0.25)'/%3e%3c/svg%3e"); /* Default icon color */
+}
+.form-switch .form-check-input:checked {
+    background-color: var(--form-switch-checked-bg);
+    border-color: var(--form-switch-checked-bg);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e"); /* White icon when checked */
+}
+.form-switch .form-check-label {
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+/* Ensure cards use the theme background */
+.card {
+    background-color: var(--card-bg) !important; /* Use important if needed to override Bootstrap */
+    color: var(--text-color) !important;
+    border: 1px solid var(--dropdown-border-color); /* Use dropdown border color for consistency */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.card-body, .card-header, .card-footer {
+    color: var(--text-color) !important;
 }
