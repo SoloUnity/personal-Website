@@ -9,10 +9,6 @@ body {
     overscroll-behavior-x: none;
 }
 
-#name {
-    font-weight: bold;
-}
-
 .title {
     font-size: 3rem;
     text-align: center;
