@@ -41,3 +41,15 @@
     width: 100%;
     object-fit: contain;
 }
+
+.modal-body .video16x9 {
+    aspect-ratio: 1920 / 1080;
+    background-color: black;
+    width: 100%;
+}
+
+.modal-body .video16x10 {
+    aspect-ratio: 1920 / 1200;
+    background-color: black;
+    width: 100%;
+}

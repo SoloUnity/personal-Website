@@ -1,12 +1,12 @@
 (async function loadFragments() {
   const parts = [
-    { targetId: 'include-navbar',   file: 'navbar.html'   },
-    { targetId: 'include-home',     file: 'home.html'     },
-    { targetId: 'include-about',    file: 'about.html'    },
-    { targetId: 'include-projects', file: 'projects.html' },
-    { targetId: 'include-skills',   file: 'skills.html'   },
-    { targetId: 'include-interests',file: 'interests.html'},
-    { targetId: 'include-footer',   file: 'footer.html'   },
+    { targetId: "include-navbar", file: "navbar.html"},
+    { targetId: "include-home", file: "home.html"},
+    { targetId: "include-about", file: "about.html"},
+    { targetId: "include-projects", file: "projects.html"},
+    { targetId: "include-skills", file: "skills.html"},
+    { targetId: "include-interests", file: "interests.html"},
+    { targetId: "include-footer", file: "footer.html"},
   ];
 
   await Promise.all(
@@ -17,6 +17,6 @@
     })
   );
 
-  console.log('Fragments loaded, dispatching event...');
-  document.dispatchEvent(new Event('fragmentsLoaded'));
+  console.log("Fragments loaded, dispatching event...");
+  document.dispatchEvent(new Event("fragmentsLoaded"));
 })();
