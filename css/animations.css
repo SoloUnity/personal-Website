@@ -4,7 +4,7 @@
 /* Scrolling animation */
 .hiddenBlur {
     opacity: 0;
-    transition: opacity 1s, transform 1s, filter 1s; /* Addresses webkit bug */
+    transition: opacity 1s, transform 1s, filter 1s;
 }
 
 .showBlur {
@@ -26,9 +26,9 @@
 
 .hiddenSlideY {
     opacity: 0;
-    filter: blur(5px); /* Add blur like SlideX */
+    filter: blur(5px);
     transform: translateY(-100%);
-    transition: opacity 1s, transform 1s, filter 1s; /* Add filter transition */
+    transition: opacity 1s, transform 1s, filter 1s;
 }
 
 .showSlideY {
@@ -99,6 +99,6 @@
     scroll-margin-top: 125px;
 }
 
-#Interests { /* Changed from #Hobbies to #Interests based on HTML ID */
+#Interests {
     scroll-margin-top: 125px;
 }

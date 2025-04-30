@@ -1,7 +1,7 @@
 (async function loadFragments() {
   const parts = [
     { targetId: "include-navbar", file: "navbar.html"},
-    { targetId: "include-home", file: "home.html"},
+    { targetId: "include-profile", file: "profile.html"},
     { targetId: "include-about", file: "about.html"},
     { targetId: "include-projects", file: "projects.html"},
     { targetId: "include-skills", file: "skills.html"},
