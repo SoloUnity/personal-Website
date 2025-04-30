@@ -1,9 +1,19 @@
+:root {
+    --link-color: var(--primary-color);
+    --link-hover-bg: var(--primary-color);
+}
+
+[data-theme="dark"] {
+    --link-color: var(--primary-color);
+    --link-hover-bg: var(--primary-color);
+}
+
 /* 
     MARK: Hyperlink styling 
 */
 .richLink {
-    box-shadow: inset 0 0 0 0 #54b3d6;
-    color: #54b3d6;
+    box-shadow: inset 0 0 0 0 var(--link-hover-bg);
+    color: var(--link-color);
     padding: 0 .25rem;
     margin: 0 -.25rem;
     transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
@@ -11,6 +21,6 @@
 }
 
 .richLink:hover {
-    color: #fff;
-    box-shadow: inset 200px 0 0 0 #54b3d6;
+    color: #ffffff;
+    box-shadow: inset 200px 0 0 0 var(--link-hover-bg);
 }

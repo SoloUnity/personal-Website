@@ -16,7 +16,54 @@ function loadVideo(video) {
   }
 }
 
+// --- Dark Mode Logic ---
+const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+// Apply the theme to the document root
+function applyTheme(theme) {
+  if (theme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+  }
+}
+
+if (currentTheme) {
+  applyTheme(currentTheme);
+} else {
+  applyTheme(prefersDarkScheme.matches ? 'dark' : 'light');
+}
+
+// Listener for system preference changes (only if no theme is stored)
+prefersDarkScheme.addEventListener('change', (e) => {
+  if (!localStorage.getItem('theme')) {
+    applyTheme(e.matches ? 'dark' : 'light');
+    // Also update the toggle if it exists
+    const themeToggle = document.getElementById('darkModeSwitch');
+    if (themeToggle) {
+        themeToggle.checked = e.matches;
+    }
+  }
+});
+// --- End Dark Mode Logic ---
+
 document.addEventListener("fragmentsLoaded", () => {
+  // Select the theme toggle *after* fragments are loaded
+  const themeToggleLoaded = document.getElementById('darkModeSwitch');
+
+  // Apply theme state to the newly loaded toggle and add listener
+  if (themeToggleLoaded) {
+    // Set initial state based on the currently applied theme
+    themeToggleLoaded.checked = document.documentElement.getAttribute('data-theme') === 'dark';
+
+    // Add listener for user interaction
+    themeToggleLoaded.addEventListener('change', function () {
+      const newTheme = this.checked ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
+  }
 
   // Lazy loading for images and videos
   document.querySelectorAll("img").forEach(img => {
@@ -44,7 +91,7 @@ document.addEventListener("fragmentsLoaded", () => {
 
   // Button scrolling
   const setupScrollport = (scrollportId, leftButtonClass, rightButtonClass, itemSelector, leftPadding = 0) => {
-    const scrollport = document.getElementById(scrollportId);
+        const scrollport = document.getElementById(scrollportId);
     const leftBtnElem = document.querySelector(`.${leftButtonClass}`);
     const rightBtnElem = document.querySelector(`.${rightButtonClass}`);
 
@@ -131,18 +178,18 @@ document.addEventListener("fragmentsLoaded", () => {
   setupScrollport("projectsScrollport", "left1", "right1", ".projColSm", 40);
   setupScrollport("vscScrollport", "left2", "right2", ".vscImage", 10);
 
-  // Moal video handling
-  const videoModals = document.querySelectorAll('.modal'); 
+  // Modal video handling
+  const videoModals = document.querySelectorAll('.modal');
 
   videoModals.forEach(modal => {
     const video = modal.querySelector('video');
     if (video) { // Only add listeners if the modal contains a video
       // Ensure the video doesn't have a src initially if preload="none"
       if (video.getAttribute('preload') === 'none') {
-         const sourceTag = video.querySelector('source');
-         if (sourceTag && sourceTag.getAttribute('src')) {
-             video.removeAttribute('src'); 
-         }
+        const sourceTag = video.querySelector('source');
+        if (sourceTag && sourceTag.getAttribute('src')) {
+          video.removeAttribute('src');
+        }
       }
 
       modal.addEventListener('show.bs.modal', () => {

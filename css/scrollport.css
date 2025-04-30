@@ -10,7 +10,7 @@
 }
 
 .scrollport::-webkit-scrollbar {
-    display: none;
+    display: none !important;
 }
 
 #vscScrollport {
