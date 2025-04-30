@@ -97,3 +97,9 @@ body {
 [data-theme="dark"] .github-logo-dark {
     display: block;
 }
+
+/* Footer Icon Theme Handling */
+.footer-icon {
+    fill: var(--text-color);
+    transition: fill 0.3s ease;
+}
