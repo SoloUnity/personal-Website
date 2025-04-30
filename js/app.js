@@ -17,76 +17,52 @@ function loadVideo(video) {
 }
 
 // --- Dark Mode Logic ---
-const themeToggle = document.getElementById('darkModeSwitch');
 const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
 const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
-// Apply the saved theme or system preference on initial load
+// Apply the theme to the document root
 function applyTheme(theme) {
   if (theme === 'dark') {
     document.documentElement.setAttribute('data-theme', 'dark');
-    if (themeToggle) themeToggle.checked = true;
   } else {
     document.documentElement.setAttribute('data-theme', 'light');
-    if (themeToggle) themeToggle.checked = false;
   }
 }
 
 if (currentTheme) {
   applyTheme(currentTheme);
-} else if (prefersDarkScheme.matches) {
-  applyTheme('dark');
 } else {
-  applyTheme('light'); // Default to light
+  applyTheme(prefersDarkScheme.matches ? 'dark' : 'light');
 }
 
-// Listener for toggle switch
-if (themeToggle) {
-  themeToggle.addEventListener('change', function () {
-    if (this.checked) {
-      document.documentElement.setAttribute('data-theme', 'dark');
-      localStorage.setItem('theme', 'dark');
-    } else {
-      document.documentElement.setAttribute('data-theme', 'light');
-      localStorage.setItem('theme', 'light');
-    }
-  });
-}
-
-// Listener for system preference changes
+// Listener for system preference changes (only if no theme is stored)
 prefersDarkScheme.addEventListener('change', (e) => {
-  // Only change if no user preference is stored
   if (!localStorage.getItem('theme')) {
     applyTheme(e.matches ? 'dark' : 'light');
+    // Also update the toggle if it exists
+    const themeToggle = document.getElementById('darkModeSwitch');
+    if (themeToggle) {
+        themeToggle.checked = e.matches;
+    }
   }
 });
 // --- End Dark Mode Logic ---
 
 document.addEventListener("fragmentsLoaded", () => {
-  // Re-select the theme toggle after fragments are loaded, as it might be inside a fragment
+  // Select the theme toggle *after* fragments are loaded
   const themeToggleLoaded = document.getElementById('darkModeSwitch');
-  const currentThemeLoaded = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
 
-  // Re-apply theme state to the newly loaded toggle
+  // Apply theme state to the newly loaded toggle and add listener
   if (themeToggleLoaded) {
-    if (document.documentElement.getAttribute('data-theme') === 'dark') {
-      themeToggleLoaded.checked = true;
-    } else {
-      themeToggleLoaded.checked = false;
-    }
+    // Set initial state based on the currently applied theme
+    themeToggleLoaded.checked = document.documentElement.getAttribute('data-theme') === 'dark';
 
-    // Re-attach listener if it wasn't attached before fragments loaded
-    if (!themeToggle) { // Check if the initial themeToggle was null
-      themeToggleLoaded.addEventListener('change', function () {
-        if (this.checked) {
-          document.documentElement.setAttribute('data-theme', 'dark');
-          localStorage.setItem('theme', 'dark');
-        } else {
-          document.documentElement.setAttribute('data-theme', 'light');
-          localStorage.setItem('theme', 'light');
-        }
-      });
-    }
+    // Add listener for user interaction
+    themeToggleLoaded.addEventListener('change', function () {
+      const newTheme = this.checked ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+    });
   }
 
   // Lazy loading for images and videos
@@ -115,7 +91,7 @@ document.addEventListener("fragmentsLoaded", () => {
 
   // Button scrolling
   const setupScrollport = (scrollportId, leftButtonClass, rightButtonClass, itemSelector, leftPadding = 0) => {
-    const scrollport = document.getElementById(scrollportId);
+        const scrollport = document.getElementById(scrollportId);
     const leftBtnElem = document.querySelector(`.${leftButtonClass}`);
     const rightBtnElem = document.querySelector(`.${rightButtonClass}`);
 

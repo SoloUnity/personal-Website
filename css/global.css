@@ -82,3 +82,18 @@ body {
     cursor: pointer;
     color: var(--text-color);
 }
+
+/* GitHub Logo Theme Handling */
+.github-logo-dark {
+    display: none;
+}
+.github-logo-light {
+    display: block;
+}
+
+[data-theme="dark"] .github-logo-light {
+    display: none;
+}
+[data-theme="dark"] .github-logo-dark {
+    display: block;
+}
