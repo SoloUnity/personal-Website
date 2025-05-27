@@ -1,7 +1,36 @@
 <div class="container px-4 py-5 darkModeText">
     <h2 id="Projects" class="pb-2 hiddenBlur">Projects</h2>
 
-    <div class="row row-cols-1 row-cols-xl-2 align-items-stretch g-4 pt-5 pb-4">
+    <div class="row row-cols-1 align-items-stretch g-4 pt-5 pb-4 hiddenBlur">
+        <div class="col mainProjCol" data-bs-toggle="modal" data-bs-target="#vscModal">
+            <div class="neumorphism h-100 overflow-hidden rounded-4 hoverable" id="vsc">
+                <img src="./assets/projects/ValorantStoreChecker/VSC.jpg" alt="Valorant Store Checker"
+                    
+                    style="object-fit: cover; width: 100%; height: 100%; position: absolute; z-index: -1;" />
+
+                <div class="d-flex flex-column h-100 p-5 text-white text-shadow-1">
+                    <h3 class="display-6 lh-1 fw-bold mb-0 mt-auto">
+                        Valorant Store Checker
+                    </h3>
+                    <div class="d-flex justify-content-between align-items-center">
+                        The premier Valorant Store Checker app for iOS
+                        <ul class="d-flex list-unstyled mb-0 flex">
+                            <li class="me-2">
+                                <img src="./assets/logos/swift.png" alt="Swift" width="32" height="32"
+                                     class="rounded-circle border border-white" />
+                            </li>
+                            <li>
+                                <img src="./assets/logos/swiftui.png" alt="SwiftUI" width="32" height="32"
+                                     class="rounded-circle border border-white" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-xl-2 align-items-stretch g-4 pb-4">
         <div class="col default-col staggerMainProject hiddenBlur" data-bs-toggle="modal" data-bs-target="#vscModal">
             <div class="neumorphism h-100 overflow-hidden rounded-4 hoverable" id="vsc">
                 <img src="./assets/projects/ValorantStoreChecker/VSC.jpg" alt="Valorant Store Checker"
@@ -49,7 +78,7 @@
         </div>
     </div>
 
-    <div class="row row-cols-1 row-cols-xl-2 align-items-stretch g-4 mb-5 position-relative" style="z-index: 2;">
+    <div class="row row-cols-1 row-cols-xl-2 align-items-stretch g-4 pb-4 position-relative" style="z-index: 2;">
         <div class="col default-col staggerMainProject hiddenBlur" data-bs-toggle="modal" data-bs-target="#codevaultModal" data-src="">
             <div class="neumorphism h-100 overflow-hidden rounded-4 hoverable" id="codevault">
                 <img src="./assets/projects/CodeVault/CodeVault.jpg" alt="CodeVault" 
