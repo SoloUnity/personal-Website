@@ -226,24 +226,20 @@ document.addEventListener("fragmentsLoaded", () => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add("showSlideX");
-
+          
+          // Handle staggerProject cleanup after animations complete
           if (entry.target.classList.contains("staggerProject")) {
             const childIndex = Array.from(entry.target.parentNode.children).indexOf(entry.target);
-            const delays = [0, 1200, 2000, 2800];
-            const delay = delays[childIndex] || 0;
+            const delays = [0, 200, 400, 600]; // Match CSS transition delays in milliseconds
+            const animationDuration = 1000; // Base animation duration is 1s
+            const totalTime = delays[childIndex] + animationDuration;
+            
             setTimeout(() => {
               entry.target.classList.remove("staggerProject");
               entry.target.classList.add("hoverable");
-            }, delay);
-          } else if (entry.target.classList.contains("staggerHobby")) {
-            const childIndex = Array.from(entry.target.parentNode.children).indexOf(entry.target);
-            if (childIndex === 0) {
-              setTimeout(() => {
-                entry.target.classList.remove("staggerHobby");
-              }, 1200);
-            }
+            }, totalTime);
           }
-
+          
           observerSlideX.unobserve(entry.target);
         }
       });
