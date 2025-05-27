@@ -3,6 +3,15 @@
 */
 
 @media screen and (max-width: 1200px) {
+
+    .staggerMainProject:nth-child(2) {
+        transition-delay: 0s !important;
+    }
+    
+    .staggerMainProject:nth-child(4) {
+        transition-delay: 0s !important;
+    }
+    
     .staggerProject:nth-child(4) {
         transition: none !important;
     }
