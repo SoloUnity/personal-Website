@@ -27,6 +27,20 @@
     mask-image: linear-gradient(to right, transparent, black 2%, black 98%);
 }
 
+#marsRoverScrollport {
+    mask-image: linear-gradient(to right, black 2%, black 98%, transparent);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#marsRoverScrollport.masked {
+    mask-image: linear-gradient(to right, transparent, black 2%, black 98%, transparent);
+}
+
+#marsRoverScrollport.maskedStart {
+    mask-image: linear-gradient(to right, transparent, black 2%, black 98%);
+}
+
 #projectsScrollport {
     transition: mask-image 0.3s ease-out;
     mask-image: linear-gradient(to right,

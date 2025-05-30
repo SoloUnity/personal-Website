@@ -91,3 +91,12 @@
 .form-check {
     margin-bottom: 0px !important;
 }
+
+#lightIcon {
+    color: var(--primary-color) !important;
+    margin-right: 8px;
+}
+
+#darkIcon {
+    color: var(--primary-color) !important;
+}

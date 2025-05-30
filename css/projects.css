@@ -12,12 +12,12 @@
     min-height: 450px;
 }
 
-.proj-col {
-    min-height: 700px; 
+.mainProjCol {
+    min-height: 600px;
 }
 
 .projColSm {
     min-height: 279px; 
-    width: 330px !important;
+    width: 324px !important;
     position: relative;
 }
