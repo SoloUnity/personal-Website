@@ -42,31 +42,31 @@
     color: var(--text-color);
 }
 
-.vscImage:not(:first-of-type):not(:last-of-type) {
+.defaultImage:not(:first-of-type):not(:last-of-type) {
     max-height: 500px;
-    border-radius: 20px;
     margin: 8px;
 }
 
-.vscImage:first-of-type {
+.defaultImage:first-of-type {
     max-height: 500px;
-    border-radius: 20px;
     margin-top: 8px;
     margin-bottom: 8px;
     margin-right: 8px;
 }
 
-.vscImage:last-of-type {
+.defaultImage:last-of-type {
     max-height: 500px;
-    border-radius: 20px;
     margin-top: 8px;
     margin-bottom: 8px;
     margin-left: 8px;
 }
 
-.AgentImage {
-    width: 100%;
-    object-fit: contain;
+.vscImage {
+    border-radius: 20px;
+}
+
+.marsImage {
+    border-radius: 10px;
 }
 
 .modal-body .video16x9 {

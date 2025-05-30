@@ -4,7 +4,7 @@
     { targetId: "yapOS-modal", file: "yapOS.html"},
     { targetId: "aiAgent-modal", file: "aiAgent.html"},
     { targetId: "codeVault-modal", file: "codeVault.html"},
-    { targetId: "marsRover-modal", file: "codeVault.html"},
+    { targetId: "marsRover-modal", file: "marsRover.html"},
     { targetId: "dance-modal", file: "dance.html"},
     { targetId: "bouldering-modal", file: "bouldering.html"},
   ];

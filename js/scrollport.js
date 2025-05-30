@@ -16,6 +16,7 @@
 
     setupHorizontalScroll("#projectsScrollport");
     setupHorizontalScroll("#vscScrollport");
+    setupHorizontalScroll("#marsRoverScrollport");
 
     // Button scrolling
     const setupScrollport = (scrollportId, leftButtonClass, rightButtonClass, itemSelector, leftPadding = 0) => {
@@ -103,7 +104,8 @@
       });
     };
 
-    setupScrollport("projectsScrollport", "left1", "right1", ".projColSm", 40);
-    setupScrollport("vscScrollport", "left2", "right2", ".vscImage", 10);
+    setupScrollport("projectsScrollport", "leftProject", "rightProject", ".projColSm", 40);
+    setupScrollport("vscScrollport", "leftVSC", "rightVSC", ".vscImage", 8);
+    setupScrollport("marsRoverScrollport", "leftMars", "rightMars", ".marsImage", 8);
   });
 })();
