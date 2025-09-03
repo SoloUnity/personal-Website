@@ -1,0 +1,135 @@
+{
+  "skillCategories": [
+    {
+      "id": "frontend",
+      "title": "Frontend",
+      "staggerClass": "staggerSkill",
+      "skills": [
+        {
+          "name": "SwiftUI",
+          "logo": "./assets/logos/swiftui.png",
+          "level": "Advanced"
+        },
+        {
+          "name": "UIKit",
+          "logo": "./assets/logos/uikit.png",
+          "level": "Intermediate"
+        },
+        {
+          "name": "HTML",
+          "logo": "./assets/logos/html.png",
+          "level": "Intermediate"
+        },
+        {
+          "name": "CSS",
+          "logo": "./assets/logos/css.png",
+          "level": "Intermediate"
+        },
+        {
+          "name": "Bootstrap",
+          "logo": "./assets/logos/bootstrap.png",
+          "level": "Basic"
+        }
+      ]
+    },
+    {
+      "id": "backend",
+      "title": "Backend",
+      "staggerClass": "staggerSkill",
+      "skills": [
+        {
+          "name": "SwiftData",
+          "logo": "./assets/logos/swiftdata.png",
+          "level": "Intermediate"
+        },
+        {
+          "name": "PSQL",
+          "logo": "./assets/logos/sql.png",
+          "level": "Basic"
+        },
+        {
+          "name": "Node.js",
+          "logo": "./assets/logos/nodejs.png",
+          "level": "Basic"
+        }
+      ]
+    },
+    {
+      "id": "general",
+      "title": "General",
+      "staggerClass": "staggerSkill",
+      "skills": [
+        {
+          "name": "Swift",
+          "logo": "./assets/logos/swift.png",
+          "level": "Advanced"
+        },
+        {
+          "name": "Python",
+          "logo": "./assets/logos/python.png",
+          "level": "Intermediate"
+        },
+        {
+          "name": "Java",
+          "logo": "./assets/logos/java.png",
+          "level": "Intermediate"
+        },
+        {
+          "name": "JavaScript",
+          "logo": "./assets/logos/javascript.png",
+          "level": "Basic"
+        },
+        {
+          "name": "C",
+          "logo": "./assets/logos/c.png",
+          "level": "Basic"
+        },
+        {
+          "name": "OCaml",
+          "logo": "./assets/logos/ocaml.png",
+          "level": "Basic"
+        }
+      ]
+    },
+    {
+      "id": "other",
+      "title": "Other",
+      "staggerClass": "staggerSkill",
+      "skills": [
+        {
+          "name": "Git",
+          "logo": "./assets/logos/git.png",
+          "level": ""
+        },
+        {
+          "name": "GitHub",
+          "logo": {
+            "light": "./assets/logos/github-light.png",
+            "dark": "./assets/logos/github-dark.png"
+          },
+          "level": ""
+        },
+        {
+          "name": "SwiftTest",
+          "logo": "./assets/logos/swifttest.png",
+          "level": ""
+        },
+        {
+          "name": "JUnit",
+          "logo": "./assets/logos/junit.png",
+          "level": ""
+        },
+        {
+          "name": "Jira",
+          "logo": "./assets/logos/jira.png",
+          "level": ""
+        },
+        {
+          "name": "Confluence",
+          "logo": "./assets/logos/confluence.png",
+          "level": ""
+        }
+      ]
+    }
+  ]
+}

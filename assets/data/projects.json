@@ -1,0 +1,144 @@
+{
+  "featuredProject": {
+    "id": "valorant-store-checker",
+    "title": "Valorant Store Checker",
+    "description": "The premier Valorant Store Checker app for iOS",
+    "image": "./assets/projects/ValorantStoreChecker/VSC.jpg",
+    "alt": "Valorant Store Checker",
+    "modalTarget": "#vscModal",
+    "technologies": [
+      {
+        "name": "Swift",
+        "logo": "./assets/logos/swift.png"
+      },
+      {
+        "name": "SwiftUI",
+        "logo": "./assets/logos/swiftui.png"
+      }
+    ],
+    "classes": "mainProjCol",
+    "containerClasses": "row row-cols-1 align-items-stretch g-4 pt-5 pb-4 hiddenBlur"
+  },
+  "mainProjects": [
+    {
+      "id": "yapos",
+      "title": "yapOS",
+      "description": "A shell interface with basic OS functionalities",
+      "image": "./assets/projects/yapOS/yapOS.jpg",
+      "alt": "yapOS",
+      "modalTarget": "#yapOSModal",
+      "technologies": [
+        {
+          "name": "C",
+          "logo": "./assets/logos/c.png"
+        }
+      ],
+      "staggerClass": "staggerMainProject"
+    },
+    {
+      "id": "ai-agent",
+      "title": "AI Game Agent",
+      "description": "A 90th percentile AI game agent",
+      "image": "./assets/projects/AIAgent/AIAgent.jpg",
+      "alt": "AI Game Agent",
+      "modalTarget": "#aiagentModal",
+      "technologies": [
+        {
+          "name": "Python",
+          "logo": "./assets/logos/python.png"
+        }
+      ],
+      "staggerClass": "staggerMainProject"
+    },
+    {
+      "id": "mars-rover",
+      "title": "Mars Rover Simulator",
+      "description": "Pathfinding in a martian environment",
+      "image": "./assets/projects/MarsRoverSimulator/MarsRoverSimulator.jpg",
+      "alt": "Mars Rover Simulator",
+      "modalTarget": "#marsRoverModal",
+      "technologies": [
+        {
+          "name": "Python",
+          "logo": "./assets/logos/python.png"
+        }
+      ],
+      "staggerClass": "staggerMainProject"
+    },
+    {
+      "id": "codevault",
+      "title": "CodeVault",
+      "description": "A ConUHacks 2023 hackathon project",
+      "image": "./assets/projects/CodeVault/CodeVault.jpg",
+      "alt": "CodeVault",
+      "modalTarget": "#codevaultModal",
+      "technologies": [
+        {
+          "name": "Swift",
+          "logo": "./assets/logos/swift.png"
+        },
+        {
+          "name": "SwiftUI",
+          "logo": "./assets/logos/swiftui.png"
+        },
+        {
+          "name": "React",
+          "logo": "./assets/logos/reactjs.png"
+        }
+      ],
+      "staggerClass": "staggerMainProject"
+    }
+  ],
+  "smallProjects": [
+    {
+      "id": "123loadboard",
+      "title": "123Loadboard",
+      "description": "CodeJam 2023 hackathon project, helps truckers find loads with React.js and iOS.",
+      "link": "https://devpost.com/software/goodlucktruck",
+      "linkText": "DevPost",
+      "staggerClass": "staggerProject",
+      "marginClass": "margin-left"
+    },
+    {
+      "id": "nextclass",
+      "title": "NextClass",
+      "description": "CodeJam 2022 hackathon project, schedule based social media website.",
+      "link": "https://devpost.com/software/schedule-bsc9w6",
+      "linkText": "DevPost",
+      "staggerClass": "staggerProject"
+    },
+    {
+      "id": "spam-detector",
+      "title": "Spam Detector",
+      "description": "Spam email detector leveraging machine learning algorithms in Python.",
+      "link": "https://github.com/SoloUnity/my-Classes/tree/master/marianopolis/420-LCW-MS%20Programming%20Techniques%20and%20Applications/Assignments/a3%20Spambase",
+      "linkText": "GitHub",
+      "staggerClass": "staggerProject"
+    },
+    {
+      "id": "rescue-robot",
+      "title": "Rescue Robot",
+      "description": "Regional science fair candidate, autonomous all-terrain search & rescue bot.",
+      "link": "https://github.com/SoloUnity/remote-search-and-rescue-robot",
+      "linkText": "GitHub",
+      "staggerClass": "staggerProject"
+    },
+    {
+      "id": "portfolio-site",
+      "title": "Portfolio Site",
+      "description": "The website you are on right now! Built with HTML, CSS, and JavaScript.",
+      "link": "https://github.com/SoloUnity/Gordon-Ng",
+      "linkText": "GitHub",
+      "classes": "hoverable"
+    },
+    {
+      "id": "github-link",
+      "title": "GitHub",
+      "description": "For more projects and for my latest activity, check out my GitHub!",
+      "link": "https://github.com/SoloUnity",
+      "linkText": "GitHub",
+      "classes": "hoverable",
+      "marginClass": "margin-right"
+    }
+  ]
+}
