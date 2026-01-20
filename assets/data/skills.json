@@ -75,18 +75,8 @@
           "level": "Intermediate"
         },
         {
-          "name": "JavaScript",
-          "logo": "./assets/logos/javascript.png",
-          "level": "Basic"
-        },
-        {
           "name": "C",
           "logo": "./assets/logos/c.png",
-          "level": "Basic"
-        },
-        {
-          "name": "OCaml",
-          "logo": "./assets/logos/ocaml.png",
           "level": "Basic"
         }
       ]
